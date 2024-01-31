@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    font-family: "PT Sans";
+    font-size: 22px;
+}
+
+.header-main {
+    width: 1200px;
+    height: 64px;
+    margin: 0 auto;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 70px;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-right: 30px;
+}
+
+.site-navigation {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+}
+.site-navigation-item a{
+    padding: 20px 16px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: capitalize;
+}
+
+.site-navigation-item a:hover {
+    border-bottom: 3px solid #756157;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-button {
+    border-radius: 4px;
+    background: var(--Buttons-basic, #756157);
+    padding: 8px 25px;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-left: 8px;
+}
