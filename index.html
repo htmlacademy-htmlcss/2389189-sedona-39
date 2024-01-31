@@ -75,11 +75,22 @@
       <article class="mail">
         <h2>Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
-        <input type="text" value="Ваш е-mail">
-        <button>Подписаться</button>
+        <form action="обработчик_подписки" method="post">
+          <input type="email" id="email" name="email" placeholder="Ваш e-mail" required>
+          <button type="submit">Подписаться</button>
+        </form>
       </article>
     </main>
-    <footer></footer>
+    <footer class="footer-main">
+      <div class="social">
+        <img src="img/Social.svg" alt="">
+        <img src="img/Social (1).svg" alt="">
+        <img src="img/Social (2).svg" alt="">
+      </div>
+      <a href="tel: + 78128121212">+7(812)812-12-12</a>
+      <img src="img/LogoHTML.svg" alt="">
+
+    </footer>
 
 
   </body>
