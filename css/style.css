@@ -2,6 +2,9 @@ body {
     margin: 0;
     font-family: "PT Sans";
     font-size: 22px;
+    width: 1200px;
+    height: 64px;
+    margin: 0 auto;
 }
 
 .header-main {
@@ -32,10 +35,13 @@ body {
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
-
+    height: 64px;
 }
+
+
 .site-navigation-item a{
-    padding: 20px 16px;
+    margin: 0;
+    padding: 0 16px;
     text-decoration: none;
     color: black;
     font-size: 20px;
@@ -45,11 +51,9 @@ body {
     text-transform: capitalize;
 }
 
-.site-navigation-item a:hover {
-    border-bottom: 3px solid #756157;
-}
 
 .icons {
+    height: 64px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,3 +73,5 @@ body {
     text-align: center;
     margin-left: 8px;
 }
+
+/*шапка*/
