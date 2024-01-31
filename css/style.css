@@ -240,7 +240,7 @@ input[type="email"] {
   padding: 18px 15px;
   width: 452px;
   border: 0.5px solid #ccc;
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 4px 0 0 4px;
 }
 
 button[type="submit"] {
@@ -248,7 +248,7 @@ button[type="submit"] {
   background-color: #82B3D3;
   color: #fff;
   border: none;
-  border-radius: 0px 4px 4px 0px;
+  border-radius: 0 4px 4px 0;
   cursor: pointer;
   font-size: 18px;
   font-style: normal;
