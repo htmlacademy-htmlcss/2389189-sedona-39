@@ -183,12 +183,9 @@ h2 {
     line-height: 20px;
     text-transform: uppercase;
     margin-bottom: 96px;
+    color: aliceblue;
 }
-.button-search a{
-    text-decoration: none;
-    color: #FFF;
-    text-align: center;
-}
+
 
 
 .footer-main {
