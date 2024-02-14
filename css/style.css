@@ -42,7 +42,7 @@ body {
     margin: 0;
     padding: 0 16px;
     text-decoration: none;
-    color: black;
+    color: #000;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -61,7 +61,7 @@ body {
 
 .nav-button {
     border-radius: 4px;
-    background: var(--Buttons-basic, #756157);
+    background: #756157;
     padding: 8px 25px;
     color: #FFF;
     font-size: 16px;
@@ -109,7 +109,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     padding: 0;
-    margin: 0;
+    margin: 0 0 90px 0;
 }
 
 .advantage-item {
@@ -152,7 +152,7 @@ h1 {
 }
 
 .peculiarity {
-    margin: 0;
+    margin: 0 0 90px 0;
     padding: 0;
 }
 
@@ -167,20 +167,34 @@ h1 {
     margin: 0 0 20px 0;
 }
 .peculiarity p{
-    margin: 0;
+    margin: 0 0 64px 0;
     padding: 0;
     text-align: center;
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
     line-height: 26px;
-    margin-bottom: 64px;
 }
-.photo-2 {
+
+.peculiarity-items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 96px;
+    padding: 0;
+    margin: 0;
+}
+
+
+.peculiarity-list {
+    margin: 0;
+    text-align: center;
+    list-style: none;
+    Width: 400px;
+    Height: 385px;
+    padding-top: 80px;
+}
+
+.peculiarity-list h2{
+    padding: 30px;
 }
 
 .search {
@@ -213,7 +227,7 @@ h1 {
     display: block;
     margin: 0 auto;
     border-radius: 4px;
-    background: var(--Buttons-basic, #756157);
+    background: #756157;
     padding: 10px 50px;
     font-size: 16px;
     font-style: normal;
