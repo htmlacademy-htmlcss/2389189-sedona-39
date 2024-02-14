@@ -104,20 +104,36 @@ h1 {
     margin: 0 0 90px 0;
 }
 
-.photo {
+
+
+.advantages{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 64px;
+}
+
+.advantage-item {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 385px;
+}
+
+.advantage-item h2{
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 24px;
+    line-height: 28px;
+
 }
 
 
-.advantage {
+.peculiarity {
     margin: 0;
     padding: 0;
 }
 
-h2 {
+.peculiarity h2 {
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
@@ -127,7 +143,7 @@ h2 {
     text-align: center;
     margin: 0 0 20px 0;
 }
-.advantage p{
+.peculiarity p{
     margin: 0;
     padding: 0;
     text-align: center;
