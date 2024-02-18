@@ -73,8 +73,37 @@ body {
     margin-left: 8px;
 }
 
+.hero{
+    background-image: url("/img/фон-фильтра.png");
+    width: 1200px;
+    height: 408px;
+}
 
+.hero h1{
+    font-size: 60px;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-transform: none;
+    line-height: 78px;
+    text-align: start;
+    padding: 35px 70px 8px 70px;
+    margin: 0;
+}
+.filtr {
+    display: inline-flex;
+    padding: 0 70px;
+    margin: 0;
+    color: #FFF;
+    height: 21px;
+    width: 114px;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.filtr p{
+    margin: 0;
+    font-size: 16px;
+}
 
 
 
