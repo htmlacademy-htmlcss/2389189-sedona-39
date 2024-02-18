@@ -1,0 +1,115 @@
+body {
+    font-family: "PT Sans";
+    font-size: 22px;
+    width: 1200px;
+    height: 64px;
+    margin: 0 auto;
+}
+
+.header-main {
+    width: 1200px;
+    height: 64px;
+    margin: 0 auto;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 70px;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-right: 30px;
+}
+
+.site-navigation {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    height: 64px;
+}
+
+
+.site-navigation-item a{
+    margin: 0;
+    padding: 0 16px;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: capitalize;
+}
+
+
+.icons {
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-button {
+    border-radius: 4px;
+    background: #756157;
+    padding: 8px 25px;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-left: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 70px 30px 70px;
+}
+
+.social{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.footer-main a {
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: 40px;
+text-transform: uppercase;
+}
