@@ -3,10 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style-catalog.css">
     <title>HTML Academy: Седона</title>
   </head>
@@ -40,10 +36,51 @@
     <main>
       <section class="hero">
         <h1>Гостиницы Седоны</h1>
-        <div class="filtr">
+        <div class="home">
           <img src="img/home.svg" alt="home" width="13" height="15">
           <img src="img/стрелочка.svg" alt="стрелочка" width="8" height="20">
-        <p>Гостиницы</p></div>
+          <p>Гостиницы</p>
+        </div>
+
+        <div class = "filter">
+          <div>
+            <p>Инфраструктура:</p>
+            <label class="container">Бассейн
+              <input type="checkbox" checked="checked">
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Парковка
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Wi-Fi
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div>
+            <p>Тип жилья:</p>
+            <label class="radio">
+              <input type="radio" />
+              <div class="radio__text">А я переключаю радиокнопку</div>
+            </label>
+            <label class="radio">
+              <input type="radio" />
+              <div class="radio__text">А я переключаю радиокнопку</div>
+            </label>
+            <label class="radio">
+              <input type="radio" />
+              <div class="radio__text">А я переключаю радиокнопку</div>
+            </label>
+          </div>
+          <div>
+            <p>Стоимость, ₽:</p>
+
+          </div>
+        </div>
+
       </section>
     </main>
 

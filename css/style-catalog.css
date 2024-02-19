@@ -1,3 +1,20 @@
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
+    font-display: swap;
+}
+
+
 body {
     font-family: "PT Sans";
     font-size: 22px;
@@ -89,7 +106,7 @@ body {
     padding: 35px 70px 8px 70px;
     margin: 0;
 }
-.filtr {
+.home {
     display: inline-flex;
     padding: 0 70px;
     margin: 0;
@@ -100,10 +117,87 @@ body {
     justify-content: space-between;
 }
 
-.filtr p{
+.home p{
     margin: 0;
     font-size: 16px;
 }
+
+.filter {
+    display: flex;
+    justify-content: space-around;
+    color: #FFF;
+}
+
+.filter p {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+    line-height: 23px;
+    font-weight: 400;
+
+  }
+
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 25%;
+  }
+
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  .container input:checked ~ .checkmark {
+    background-color: #ffffff;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+
 
 
 
