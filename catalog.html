@@ -62,22 +62,32 @@
           </div>
           <div>
             <p>Тип жилья:</p>
-            <label class="radio">
-              <input type="radio" />
-              <div class="radio__text">А я переключаю радиокнопку</div>
-            </label>
-            <label class="radio">
-              <input type="radio" />
-              <div class="radio__text">А я переключаю радиокнопку</div>
-            </label>
-            <label class="radio">
-              <input type="radio" />
-              <div class="radio__text">А я переключаю радиокнопку</div>
-            </label>
+            <label for="radio-one" class="form-radio-hidden">
+              <input type="radio" name="demo" value="one" id="radio-one" checked>
+              <span class="radio"></span>
+              <span class="text">Гостиница</span>
+          </label>
+          <label for="radio-two" class="form-radio-hidden">
+              <input type="radio" name="demo" value="one" id="radio-two">
+              <span class="radio"></span>
+              <span class="text">Гостиница</span>
+          </label>
+          <label for="radio-three" class="form-radio-hidden">
+              <input type="radio" name="demo" value="one" id="radio-three">
+              <span class="radio"></span>
+              <span class="text">Апартаменты</span>
+          </label>
           </div>
           <div>
             <p>Стоимость, ₽:</p>
-
+            <div class="cost">
+              <input type="text" name="cost" class="before" value="0">
+              <input type="text" name="cost" class="after" value="9000">
+            </div>
+          </div>
+          <div class="button-test">
+            <button class="filter-button">ПРИМЕНИТЬ</button>
+            <button class="clear-button">СБРОСИТЬ</button>
           </div>
         </div>
 

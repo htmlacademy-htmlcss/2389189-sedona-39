@@ -124,14 +124,17 @@ body {
 
 .filter {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     color: #FFF;
+    width: 1060px;
+    margin: 0 auto;
 }
 
 .filter p {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
+    margin-bottom: 32px;
 }
 
 .container {
@@ -148,7 +151,7 @@ body {
   }
 
   .container input {
-    position: absolute;
+    position: relative;
     opacity: 0;
     cursor: pointer;
     height: 0;
@@ -160,14 +163,10 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     background-color: #eee;
     border-radius: 25%;
-  }
-
-  .container:hover input ~ .checkmark {
-    background-color: #ccc;
   }
 
   .container input:checked ~ .checkmark {
@@ -176,7 +175,7 @@ body {
 
   .checkmark:after {
     content: "";
-    position: absolute;
+    position: relative;
     display: none;
   }
 
@@ -185,8 +184,8 @@ body {
   }
 
   .container .checkmark:after {
-    left: 9px;
-    top: 5px;
+    left: 6px;
+    top: 2px;
     width: 5px;
     height: 10px;
     border: solid black;
@@ -197,6 +196,96 @@ body {
   }
 
 
+
+
+  .form-radio-hidden{
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+    position: relative;
+    align-items: center;
+    margin: 0;
+    padding: 0 0 15px 0;
+  }
+  .form-radio-hidden input{
+    position: absolute;
+    opacity: 0;
+    display: block;
+    height: 0;
+    width: 0;
+  }
+  .form-radio-hidden .radio{
+    appearance: none;
+    display: inline-block;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    margin-right: 16px;
+    background-color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    box-sizing: border-box;
+    transition: .5s all;
+  }
+  .form-radio-hidden:hover .radio{
+    background-color: #ffffff;
+    box-shadow: inset 1px 2px 3px 0 rgba(0,0,0,0.1);
+  }
+
+  .form-radio-hidden:hover .radio::before, .form-radio-hidden input:checked + .radio::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .form-radio-hidden input:checked + .radio::before{
+    background-color: #3F5E72;
+  }
+  .form-radio-hidden input + .radio + .text{
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 10px;
+    align-self: center;
+    line-height: 23px;
+  }
+
+
+
+
+
+.cost {
+    width: 288px;
+    display: inline-flex;
+}
+
+.cost .before{
+    width: 123px;
+    height: 18px;
+    border-radius: 4px 0 0 4px;
+    border-style: none;
+    padding: 12px 20px;
+    margin-right: 2px;
+}
+.cost .after {
+    width: 123px;
+    height: 18px;
+    border-radius: 0 4px 4px 0;
+    border-style: none;
+    padding: 12px 20px;
+}
+
+
+.button-test{
+    display: block;
+    width: 191px;
+}
 
 
 
