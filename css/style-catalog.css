@@ -128,6 +128,7 @@ body {
     color: #FFF;
     width: 1060px;
     margin: 0 auto;
+    height: 170px;
 }
 
 .filter p {
@@ -257,11 +258,18 @@ body {
   }
 
 
-
+.cost-filter{
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/бегунок.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
 
 .cost {
     display: flex;
     width: 288px;
+
 }
 
 .test {
@@ -296,9 +304,6 @@ body {
     border-radius: 0 4px 4px 0;
     border-style: none;
 }
-
-
-
 
 
 .button-test{
