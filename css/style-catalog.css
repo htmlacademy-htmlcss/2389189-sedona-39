@@ -275,8 +275,13 @@ body {
     opacity: 30%;
     position: absolute;
     padding-left: 126px;
-    padding-top: 7px;
+    padding-top: 10px;
+    font-size: 18px;
 }
+.test span:hover {
+    display: none;
+}
+
 
 .before {
     width: 143px;
