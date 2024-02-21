@@ -259,27 +259,41 @@ body {
 
 
 
-
 .cost {
+    display: flex;
     width: 288px;
-    display: inline-flex;
 }
 
-.cost .before{
-    width: 123px;
-    height: 18px;
+.test {
+    margin-right: 2px;
+    display: inline-flex;
+    height: 48px;
+}
+
+.test span {
+    color: #000000;
+    opacity: 30%;
+    position: absolute;
+    padding-left: 126px;
+    padding-top: 7px;
+}
+
+.before {
+    width: 143px;
+    padding: 12px 0 12px 12px;
     border-radius: 4px 0 0 4px;
     border-style: none;
-    padding: 12px 20px;
-    margin-right: 2px;
 }
-.cost .after {
-    width: 123px;
-    height: 18px;
+
+.after {
+    width: 143px;
+    padding: 12px 0 12px 12px;
     border-radius: 0 4px 4px 0;
     border-style: none;
-    padding: 12px 20px;
 }
+
+
+
 
 
 .button-test{
