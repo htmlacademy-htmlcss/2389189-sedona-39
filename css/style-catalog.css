@@ -269,7 +269,7 @@ body {
 .cost {
     display: flex;
     width: 288px;
-
+    position: relative;
 }
 
 .test {
@@ -296,6 +296,7 @@ body {
     padding: 12px 0 12px 12px;
     border-radius: 4px 0 0 4px;
     border-style: none;
+    font-family: "PT Sans";
 }
 
 .after {
@@ -303,6 +304,7 @@ body {
     padding: 12px 0 12px 12px;
     border-radius: 0 4px 4px 0;
     border-style: none;
+    font-family: "PT Sans";
 }
 
 
