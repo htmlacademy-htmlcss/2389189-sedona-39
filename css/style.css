@@ -363,6 +363,7 @@ body {
     width: 1200px;
     height: 64px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .header-main {
@@ -434,8 +435,9 @@ body {
 
 .hero{
     background-image: url("../img/fon-filter.png");
+    background-repeat: no-repeat;
     width: 1200px;
-    height: 408px;
+    height: 412px;
 }
 
 .hero h1{
@@ -470,7 +472,8 @@ body {
     color: #FFF;
     width: 1060px;
     margin: 0 auto;
-    height: 170px;
+    height: 160px;
+    padding: 40px 0 0 0;
 }
 
 .filter p {
@@ -478,9 +481,12 @@ body {
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 32px;
+    margin: 0;
+    padding-bottom: 32px;
 }
 
 .container {
+
     display: block;
     position: relative;
     padding-left: 35px;
@@ -538,7 +544,9 @@ body {
     transform: rotate(45deg);
   }
 
-
+.radio-button {
+    margin: 0;
+}
 
 
   .form-radio-hidden{
@@ -606,12 +614,13 @@ body {
     background-image: url("../img/бегунок.svg");
     background-repeat: no-repeat;
     background-position: bottom;
+    width: 288px;
 }
 
 .cost {
     display: flex;
-    width: 288px;
     position: relative;
+
 }
 
 .test {
@@ -624,7 +633,7 @@ body {
     color: #000000;
     opacity: 30%;
     position: absolute;
-    padding-left: 126px;
+    padding-left: 116px;
     padding-top: 10px;
     font-size: 18px;
 }
@@ -634,39 +643,116 @@ body {
 
 
 .before {
-    width: 143px;
-    padding: 12px 0 12px 12px;
+    width: 123px;
+    padding: 12px;
     border-radius: 4px 0 0 4px;
     border-style: none;
     font-family: "PT Sans";
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
 }
 
 .after {
-    width: 143px;
-    padding: 12px 0 12px 12px;
+    width: 123px;
+    padding: 12px;
     border-radius: 0 4px 4px 0;
     border-style: none;
     font-family: "PT Sans";
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
 }
 
 
 .button-test{
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    width: 200px;
+}
+
+.filter-button {
+    background-color: #82B3D3;
+    padding: 8px 50px;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    text-align: center;
+    border-style: none;
+    margin: 0 70px 0 0;
+}
+
+.clear-button {
+    background-color: transparent;
+    border-style: none;
+    padding: 8px 55px;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
     width: 191px;
 }
 
 
+.hotel {
+    margin: 0 auto;
+    padding-top: 56px;
+    width: 1060px;
 
+}
 
+.holel-head {
+    height: 49px;
+    display: flex;
+    align-items: center;
+    background-image: url("../img/setka.svg"), url("../img/oblast.svg"), url("../img/spisok.svg");
+    background-repeat: no-repeat;
+    background-position: bottom 50% right 120px, bottom 50% right 60px, bottom 50% right 0;
+    background-size: 48px;
+}
 
+.holel-head h2{
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
 
+.hotel-form {
+    padding-left: 200px;
+}
 
+#hotel-select {
+    width: 292px;
+    padding: 14px 20px 14px 20px;
+    border-color: #E5E5E5;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    font-family: "PT Sans";
+    border-radius: 4px;
+}
 
+.hotel-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 40px 0 0 0;
+}
 
-
-
-
-
+.hotel-items {
+    list-style: none;
+    padding: 20px;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+}
 
 
 
@@ -676,6 +762,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 40px 70px 30px 70px;
+    margin-top: 20px;
 }
 
 .social{

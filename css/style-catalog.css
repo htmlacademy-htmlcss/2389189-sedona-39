@@ -333,7 +333,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 70px 30px 70px;
+    margin: 40px 70px 30px 70px;
 }
 
 .social{
