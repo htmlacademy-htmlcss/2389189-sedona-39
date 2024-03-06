@@ -772,7 +772,7 @@ body {
     line-height: 21px;
     font-weight: 400;
     color: #333333;
-    margin: 0;
+
 }
 
 .hotel-button {
@@ -822,7 +822,7 @@ body {
     height: 36px;
     background-image: url("../img/star.svg"), url("../img/star.svg"), url("../img/star.svg"), url("../img/star.svg");
     background-repeat: no-repeat;
-    background-position: top 50% left 0, top 50% left 20px, top 50% left 40px, top 50% left 60px;
+    background-position: top 50% left 0, top 50% left 24px, top 50% left 48px, top 50% left 72px;
 }
 
 .star-three{
@@ -830,15 +830,16 @@ body {
     height: 36px;
     background-image: url("../img/star.svg"), url("../img/star.svg"), url("../img/star.svg");
     background-repeat: no-repeat;
-    background-position: top 50% left 0, top 50% left 20px, top 50% left 40px;
+    background-position: top 50% left 0, top 50% left 24px, top 50% left 48px;
 }
 .star-two {
     width: 140px;
     height: 36px;
     background-image: url("../img/star.svg"), url("../img/star.svg");
     background-repeat: no-repeat;
-    background-position: top 50% left 0, top 50% left 20px;
+    background-position: top 50% left 0, top 50% left 24px;
 }
+
 .raiting {
     background-color: #F2F2F2;
     width: 140px;
