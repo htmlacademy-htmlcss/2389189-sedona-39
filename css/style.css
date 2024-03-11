@@ -4,9 +4,10 @@
 body {
     font-family: "PT Sans";
     font-size: 22px;
-    width: 1200px;
-    min-height: 100vh;
+    width: 1280px;
     margin: 0 auto;
+    box-shadow: -40px 0 37px 0 rgba(227, 227, 227, 1),
+                 40px 0 37px 0 rgba(227, 227, 227, 1);
 }
 
 .header-main {
