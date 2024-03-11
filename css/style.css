@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body {
     font-family: "PT Sans";
     font-size: 22px;
@@ -35,12 +38,13 @@ body {
     margin: 0;
     padding: 0;
     height: 64px;
+
 }
 
 
 .site-navigation-item a{
     margin: 0;
-    padding: 0 16px;
+    padding: 0 15px;
     text-decoration: none;
     color: #000;
     font-size: 20px;
@@ -62,15 +66,17 @@ body {
 .nav-button {
     border-radius: 4px;
     background: #756157;
-    padding: 8px 25px;
+    padding: 5px 27px;
     color: #FFF;
+    font-family: "PT Sans";
     font-size: 16px;
-    font-style: normal;
     font-weight: 700;
     line-height: 20px;
     text-transform: uppercase;
     text-align: center;
     margin-left: 8px;
+    border-style: none;
+    width: 160px;
 }
 
 /*шапка*/
@@ -110,7 +116,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     padding: 0;
-    margin: 0 0 90px 0;
+    margin: 0 0 62px 0;
+    width: 1200px;
+    position: relative;
 }
 
 .advantage-item {
@@ -120,20 +128,53 @@ body {
     height: 385px;
     width: 400px;
     color: #FFFFFF;
+
+}
+
+.advantage-item:nth-child(1){
+    background-color: #82B3D3;
+
+}
+.advantage-item:nth-child(2), .advantage-item:nth-child(6){
+    width: 800px;
+}
+.advantage-item:nth-child(3),  .advantage-item:nth-child(5){
+    background-color: #83B3D31F;
+    padding-top: 15px;
+
+}
+.advantage-item:nth-child(4){
+    background-color: #83B3D333;
+    padding-top: 15px;
+
+}
+.advantage-item:nth-child(7){
+    background-color: #82B3D3;
+}
+
+.advantage-item-text {
+    position: relative;
+    transform: translate(0, -50%);
+    top: 50%;
+    margin: 0 auto;
+    height: 181px;
+    width: 230px;
+    text-align: center;
 }
 
 .advantage-item h2{
-    margin: 100px 0 30px 0;
+    margin: 0;
     text-transform: uppercase;
-    text-align: center;
     font-size: 24px;
     line-height: 28px;
+    text-align: center;
+    padding-bottom: 30px;
 }
 
 .advantage-item p{
     font-size: 18px;
-    margin: 30px 80px 0 80px;
     text-align: center;
+    margin: 30px 0 0 0;
 }
 
 .advantage-item:nth-child(3), .advantage-item:nth-child(4), .advantage-item:nth-child(5){
@@ -153,7 +194,7 @@ body {
 }
 
 .peculiarity {
-    margin: 0 0 90px 0;
+    margin: 0 0 95px 0;
     padding: 0;
 }
 
@@ -186,20 +227,38 @@ body {
 
 
 .peculiarity-list {
-    margin: 64px 0 0 0;
+    margin: 65px 0 0 0;
     text-align: center;
     list-style: none;
     width: 400px;
     height: 385px;
 }
 
-.peculiarity-list img{
-    padding-top: 80px;
+.peculiarity-list:nth-child(1) {
+    background-image: url("../img/Domik.svg");
+    background-repeat: no-repeat;
+    background-size: 75px 72px;
+    background-position: top 81px left 162px;
+    background-color: #83B3D31F;
 }
+.peculiarity-list:nth-child(2) {
+    background-image: url("../img/Burger.svg");
+    background-repeat: no-repeat;
+    background-size: 75px 72px;
+    background-position: top 81px left 162px;
+}
+.peculiarity-list:nth-child(3){
+    background-image: url("../img/podarok.svg");
+    background-repeat: no-repeat;
+    background-size: 75px 72px;
+    background-position: top 81px left 162px;
+    background-color: #83B3D31F;
+}
+
 
 .peculiarity-list h3{
     margin: 0;
-    padding: 30px;
+    padding: 183px 0 30px 0;
     font-size: 24px;
     line-height: 28px;
     font-weight: 700;
@@ -242,14 +301,17 @@ body {
     margin: 0 auto;
     border-radius: 4px;
     background: #756157;
-    padding: 10px 50px;
-    font-size: 16px;
+    width: 376px;
+    height: 52px;
+    font-family: "PT Sans";
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
-    line-height: 20px;
+    line-height: 36px;
     text-transform: uppercase;
     margin-bottom: 96px;
     color: aliceblue;
+    border-style: none;
 }
 
 .mail {
@@ -296,6 +358,7 @@ body {
     width: 232px;
     background-color: #82B3D3;
     color: #FFFFFF;
+    font-family: "PT Sans";
     font-size: 20px;
     line-height: 36px;
     font-weight: 700;
@@ -303,6 +366,7 @@ body {
     text-transform: uppercase;
     border-radius: 0 4px 4px 0;
     border-style: none;
+    padding: 8px 50px;
 }
 
 
@@ -310,24 +374,30 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
     padding: 40px 70px 30px 70px;
+    align-items: center;
 }
 
 .social{
     display: flex;
-    gap: 25px;
     align-items: center;
+    width: 142px;
+    height: 40px;
+    justify-content: space-around;
 }
 
 .footer-main a {
     text-decoration: none;
     color: black;
+    font-family: "PT Sans";
     font-size: 40px;
-font-style: normal;
-font-weight: 400;
-line-height: 40px;
-text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+.tel{
+    padding-top: 8px;
 }
 
 
@@ -853,33 +923,4 @@ body {
     line-height: 20px;
     font-weight: 400;
     text-transform: uppercase;
-}
-
-
-
-
-
-.footer-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 70px 30px 70px;
-    margin-top: 20px;
-}
-
-.social{
-    display: flex;
-    gap: 25px;
-    align-items: center;
-}
-
-.footer-main a {
-    text-decoration: none;
-    color: black;
-    font-size: 40px;
-font-style: normal;
-font-weight: 400;
-line-height: 40px;
-text-transform: uppercase;
 }
