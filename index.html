@@ -114,9 +114,11 @@
       <section class="search">
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <form action="forma.html">
           <button class="button-search">
             Поиск гостиницы в Седоне
           </button>
+          </form>
       </section>
 
       <article class="mail">
@@ -138,7 +140,38 @@
       <a href="https://htmlacademy.ru"><img src="img/LogoHTML.svg" alt="html-academy" width="115" height="33"></a>
 
     </footer>
+<div class="modal-container /**modal-container-close**/">
+  <div class="modal modal-auth">
+    <button class="modal-close-button">
+      <span class="visually-hidden"></span>
+    </button>
+    <section class="modal-content">
+      <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+      <div class="field-group">
+        <h3>Дата Заезда:</h3>
+        <label class="visually-hidden" for="auth-data"></label>
+        <input class="auth-form-field field" type="text" id="auth-data" name="auth-data" placeholder="27 апреля 2020">
+      </div>
+      <p class="modal-line-red">Мы не можем отправить вас в прошлое.</p>
+      <div class="field-group">
+        <h3>Дата Выезда:</h3>
+        <label class="visually-hidden" for="auth-data-none"></label>
+        <input class="auth-form-field field" type="text" id="auth-data-none" name="auth-data" placeholder="1 сентября 2023">
+      </div>
+      <p class="modal-line-black">На эти даты есть свободные номера. Пока есть.</p>
+      <div class="number-adults">
+        <h3>Взрослые:</h3>
+        <input type="text" class="input-plus-minus">
+      </div>
+      <div class="number-childs">
+        <h3>Дети:</h3>
+        <input type="text" class="input-plus-minus">
+      </div>
+      <button class="find">Найти</button>
+    </section>
+  </div>
 
+</div>
 
   </body>
 </html>
