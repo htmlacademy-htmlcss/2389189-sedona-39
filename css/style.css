@@ -9,7 +9,10 @@ body {
     box-shadow: -40px 0 37px 0 rgba(227, 227, 227, 1),
                  40px 0 37px 0 rgba(227, 227, 227, 1);
 }
-
+input:focus{
+    outline: none;
+    border: 2px solid #68A2CA;
+}
 .header-main {
     width: 1200px;
     height: 64px;
@@ -39,13 +42,10 @@ body {
     margin: 0;
     padding: 0;
     height: 64px;
-
 }
 
-
 .site-navigation-item a{
-    margin: 0;
-    padding: 0 15px;
+    margin: 18px 15px;
     text-decoration: none;
     color: #000;
     font-size: 20px;
@@ -53,6 +53,11 @@ body {
     font-weight: 700;
     line-height: 24px;
     text-transform: capitalize;
+
+}
+.site-navigation-item a:hover {
+    border-bottom: 1px solid #756257;
+    padding-bottom: 18px;
 }
 
 
@@ -81,6 +86,13 @@ body {
     height: 36px;
 }
 
+.nav-button:hover{
+    background-color: #615048;
+}
+
+.nav-button:active{
+    color: rgba(255, 255, 255, 0.3);
+}
 /*шапка*/
 
 
@@ -177,6 +189,11 @@ body {
     font-size: 18px;
     text-align: center;
     margin: 30px 0 0 0;
+    line-height: 21px;
+    width: 230px;
+    height: 42px;
+    font-weight: 400;
+    white-space: nowrap;
 }
 
 .advantage-item:nth-child(3), .advantage-item:nth-child(4), .advantage-item:nth-child(5){
@@ -316,6 +333,19 @@ body {
     border-style: none;
 }
 
+.button-search:hover{
+    background-color: #615048;
+}
+
+.button-search:active{
+    color: rgba(255, 255, 255, 0.3);
+
+}
+.button-search:disabled{
+    background-color: #E5E5E5;
+
+}
+
 .mail {
     background-image: url("../img/email-fon.svg");
     text-align: center;
@@ -346,6 +376,8 @@ body {
     align-content: center;
 }
 
+
+
 .mail-input {
     border-radius: 4px 0 0 4px;
     border-style: none;
@@ -357,6 +389,8 @@ body {
     line-height: 24px;
     background-color: #F2F2F2;
 }
+
+
 
 .button-mail {
     width: 232px;
@@ -373,36 +407,19 @@ body {
     padding: 8px 50px;
 }
 
-
-.footer-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 40px 70px 30px 70px;
-    align-items: center;
+.button-mail:hover{
+    background-color: #68A2CA;
+}
+.button-mail:active{
+    color: rgba(255, 255, 255, 0.3);
+}
+.button-mail:disabled{
+    background-color: #E5E5E5;
 }
 
-.social{
-    display: flex;
-    align-items: center;
-    width: 142px;
-    height: 40px;
-    justify-content: space-around;
-}
 
-.footer-main a {
-    text-decoration: none;
-    color: black;
-    font-family: "PT Sans";
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 40px;
-    text-transform: uppercase;
-}
-.tel{
-    padding-top: 8px;
-}
+
+
 
 
 
@@ -432,84 +449,6 @@ body {
 
 *{
     box-sizing: border-box;
-}
-body {
-    font-family: "PT Sans";
-    font-size: 22px;
-    width: 1200px;
-    min-height: 100vh;
-    margin: 0 auto;
-}
-
-.header-main {
-    width: 1200px;
-    height: 64px;
-    margin: 0 auto;
-}
-
-.main-nav {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 70px;
-}
-.navigation{
-    display: flex;
-    justify-content: space-between;
-}
-
-.logo {
-    margin-right: 30px;
-}
-
-.site-navigation {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    height: 64px;
-
-}
-
-
-.site-navigation-item a{
-    margin: 0;
-    padding: 0 15px;
-    text-decoration: none;
-    color: #000;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 24px;
-    text-transform: capitalize;
-}
-
-
-.icons {
-    height: 64px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 24px;
-}
-
-.nav-button {
-    border-radius: 4px;
-    background: #756157;
-    padding: 5px 27px;
-    color: #FFF;
-    font-family: "PT Sans";
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    margin-left: 8px;
-    border-style: none;
-    width: 160px;
-    height: 36px;
 }
 
 /*шапка*/
@@ -579,16 +518,26 @@ body {
 
   }
 
-  .container input {
+.container:hover{
+    opacity: 30%;
+}
+.container:active{
+    opacity: 100%;
+}
+
+.container input {
     position: relative;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
+}
+.checkmark:active{
+    opacity: 100%;
+    border: 3px solid #83B3D3;
+}
 
-  }
-
-  .checkmark {
+.checkmark {
     position: absolute;
     top: 0;
     left: 0;
@@ -596,7 +545,7 @@ body {
     width: 20px;
     background-color: #eee;
     border-radius: 25%;
-  }
+}
 
   .container input:checked ~ .checkmark {
     background-color: #ffffff;
@@ -637,6 +586,14 @@ body {
     align-items: center;
     margin: 0 0 20px 0;
   }
+
+  .form-radio-hidden:hover{
+    opacity: 30%;
+}
+.form-radio-hidden:active{
+    opacity: 100%;
+}
+
   .form-radio-hidden input{
     position: absolute;
     opacity: 0;
@@ -644,6 +601,12 @@ body {
     height: 0;
     width: 0;
   }
+  .form-radio-hidden .radio:hover{
+    opacity: 100%;
+    border: 3px solid #83B3D3;
+}
+
+
   .form-radio-hidden .radio{
     appearance: none;
     display: inline-block;
@@ -690,15 +653,14 @@ body {
 .cost-filter{
     margin: 0 70px 0 0;
     padding: 0;
-    background-image: url("../img/бегунок.svg");
-    background-repeat: no-repeat;
-    background-position: bottom;
     height: 160px;
-    max-width: 288px;
+    width: 290px;
 }
 
 .cost {
+    width: 289px;
     display: flex;
+    margin-bottom: 36px;
 }
 
 .test {
@@ -744,6 +706,35 @@ body {
     font-weight: 700;
     width: 143px;
 }
+.slidecontainer {
+    width: 287px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    background: #ffffff;
+    outline: none;
+}
+
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 20px;
+    background: #ffffff;
+    cursor: pointer;
+}
 
 
 .button-test{
@@ -767,6 +758,13 @@ body {
     border-style: none;
 }
 
+.filter-button:hover{
+    background-color: #68A2CA;
+}
+.filter-button:active{
+    color: rgba(255, 255, 255, 0.3);
+}
+
 .clear-button {
     margin-top: 32px;
     background-color: transparent;
@@ -782,6 +780,14 @@ body {
     width: 191px;
 }
 
+.clear-button:hover{
+    opacity: 60%;
+}
+
+.clear-button:active{
+    opacity: 100%;
+    border: 3px solid #83B3D3;
+}
 
 .hotel {
     margin: 0 auto;
@@ -795,10 +801,7 @@ body {
     height: 49px;
     display: flex;
     align-items: center;
-    background-image: url("../img/setka.svg"), url("../img/oblast.svg"), url("../img/spisok.svg");
-    background-repeat: no-repeat;
-    background-position: bottom 50% right 112px, bottom 50% right 56px, bottom 50% right 0;
-    background-size: 48px;
+    justify-content: space-between;
 }
 
 .holel-head h2{
@@ -810,6 +813,7 @@ body {
 
 .hotel-form {
     padding-left: 200px;
+    margin-right: 70px;
 }
 
 .hotel-select {
@@ -822,6 +826,25 @@ body {
     font-family: "PT Sans";
     border-radius: 4px;
 }
+.hotel-select:focus{
+    outline: none;
+    border: 2px solid #68A2CA;
+}
+
+
+.areal {
+    height: 48px;
+    width: 48px;
+    background-color: #FFFFFF;
+    border: 2px solid #E5E5E5;
+    border-radius: 4px;
+    padding: 14px 12px;
+}
+
+.areal:focus{
+    border: 2px solid #000000;
+}
+
 
 .hotel-list {
     display: flex;
@@ -883,7 +906,12 @@ body {
     border-style: none;
     margin-bottom: 16px;
 }
-
+.details:hover{
+   background: #615048;
+}
+.details:active{
+    color: rgba(255, 255, 255, 0.3);
+}
 
 
 .favorite {
@@ -901,6 +929,37 @@ body {
     background-color: #82B3D3;
     margin-bottom: 16px;
 }
+
+.favorite:hover{
+    background-color: #68A2CA;
+}
+.favorite:active{
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.favorite-style {
+    font-family: "PT Sans";
+    padding: 8px 16px;
+    width: 140px;
+    height: 36px;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    border-style: none;
+    background-color: #7DB54F;
+    margin-bottom: 16px;
+}
+
+.favorite-style:hover{
+    background-color: #6C9E42;
+}
+.favorite-style:active{
+    color: rgba(255, 255, 255, 0.3);
+}
+
 .star {
     width: 140px;
     height: 36px;
@@ -917,7 +976,7 @@ body {
     background-position: top 50% left 0, top 50% left 24px, top 50% left 48px;
 }
 .star-two {
-    width: 140px;
+    width: 70px;
     height: 36px;
     background-image: url("../img/star.svg"), url("../img/star.svg");
     background-repeat: no-repeat;
@@ -973,6 +1032,14 @@ body {
     border-radius: 4px;
     margin-right: 8px;
 }
+
+.number-item:hover{
+    background-color: #68A2CA;
+}
+.number-item:active{
+    color: rgba(255, 255, 255, 0.3);
+}
+
 .number-item-pass {
     width: 60px;
     height: 60px;
@@ -1009,7 +1076,49 @@ body {
 }
 
 
+.footer-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 70px 30px 70px;
+    align-items: center;
+}
 
+.social{
+    display: flex;
+    align-items: center;
+    width: 142px;
+    height: 40px;
+    justify-content: space-around;
+}
+
+.social a:active{
+    opacity: 30%;
+}
+
+.footer-main a {
+    text-decoration: none;
+    font-family: "PT Sans";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+.tel{
+    padding-top: 8px;
+    color: #000000;
+}
+
+.tel:hover{
+    color: #756157;
+}
+.tel:focus{
+    color: #756157;
+}
+.tel:active{
+    opacity: 30%;
+}
 
 
 /*форма*/
@@ -1076,7 +1185,7 @@ body {
     width: 597px;
     margin-top: 23px;
 }
-.field-group h3{
+.title-text{
     font-size: 20px;
     line-height: 24px;
     margin: 0;
@@ -1114,15 +1223,17 @@ body {
 .number-adults {
     display: flex;
     align-items: center;
+    margin-top: 23px;
 }
 
 .number-childs {
     display: flex;
     align-items: center;
+    margin-top: 23px;
     background-image: url("../img/info.svg");
     background-repeat: no-repeat;
     background-size: 26px 26px;
-    background-position: top 50% left 70px;
+    background-position: top 50% left 60px;
 }
 
 .input-plus-minus {
@@ -1140,6 +1251,7 @@ body {
 }
 
 .find {
+    margin-top: 48px;
     background-color: #83B3D3;
     width: 577px;
     height: 60px;
