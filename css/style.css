@@ -487,6 +487,8 @@ input:focus{
     font-size: 16px;
 }
 
+
+
 .filter {
     display: flex;
     color: #FFF;
@@ -861,6 +863,10 @@ input:focus{
     border-radius: 4px;
     margin-bottom: 19px;
 }
+.hotel-items a{
+    text-decoration: none;
+    color: #000000;
+}
 .hotel-items h3{
     margin: 0;
     font-size: 24px;
@@ -1091,7 +1097,9 @@ input:focus{
     height: 40px;
     justify-content: space-around;
 }
-
+.social a:hover path{
+    fill: #68A2CA;
+}
 .social a:active{
     opacity: 30%;
 }
@@ -1117,6 +1125,12 @@ input:focus{
     color: #756157;
 }
 .tel:active{
+    opacity: 30%;
+}
+.logo-html:hover path {
+    fill: #756157;
+}
+.logo-html:active{
     opacity: 30%;
 }
 
