@@ -1204,7 +1204,6 @@ input:focus{
     line-height: 24px;
     margin: 0;
     padding: 0;
-
 }
 .auth-form-field {
     width: 440px;
@@ -1217,6 +1216,12 @@ input:focus{
     background-repeat: no-repeat;
     background-position: 30em 15px;
     font-family: "PT Sans";
+}
+
+.auth-form-field::placeholder{
+    font-weight: 700;
+    font-size: 18px;
+    color: #000000;
 }
 
 .modal-line-red{
@@ -1244,17 +1249,35 @@ input:focus{
     display: flex;
     align-items: center;
     margin-top: 23px;
-    background-image: url("../img/info.svg");
-    background-repeat: no-repeat;
-    background-size: 26px 26px;
-    background-position: top 50% left 60px;
+}
+.number-childs svg{
+    margin-left: 10px;
+}
+
+.button-number{
+    display: flex;
+   width: 110px;
+   margin-left: 48px;
+   border-style: none;
+
+}
+.button-minus{
+    border-style: none;
+    width: 40px;
+    background-color: #F2F2F2;
+    color: #7561574D;
+}
+.button-plus{
+    border-style: none;
+    width: 40px;
+    background-color: #F2F2F2;
+    color: #7561574D;
 }
 
 .input-plus-minus {
-    border-radius: 4px;
-    width: 110px;
+    padding: 0;
+    width: 31px;
     height: 48px;
-    margin-left: 46px;
     background-color: #F2F2F2;
     border-style: none;
     font-family: "PT Sans";

@@ -179,7 +179,7 @@
       </a>
 
     </footer>
-<div class="modal-container modal-container-close">
+<div class="modal-container /**modal-container-close"**/>
   <div class="modal modal-auth">
     <button class="modal-close-button" type="button">
       <span class="visually-hidden"></span>
@@ -198,14 +198,29 @@
         <input class="auth-form-field field" type="text" id="auth-data-none" name="auth-data" placeholder="1 сентября 2023">
       </div>
       <p class="modal-line-black">На эти даты есть свободные номера. Пока есть.</p>
+
       <div class="number-adults">
         <h3 class="title-text">Взрослые:</h3>
-        <input type="text" class="input-plus-minus">
+        <div class="button-number">
+          <button type="button" class="button-minus">-</button>
+          <input type="text" class="input-plus-minus">
+          <button type="button" class="button-plus">+</button>
+        </div>
       </div>
+
       <div class="number-childs">
         <h3 class="title-text">Дети:</h3>
-        <input type="text" class="input-plus-minus">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="13" cy="13" r="13" fill="#83B3D3"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"/>
+        </svg>
+        <div class="button-number">
+          <button type="button" class="button-minus">-</button>
+          <input type="text" class="input-plus-minus">
+          <button type="button" class="button-plus">+</button>
+        </div>
       </div>
+
       <button class="find"  type="button">Найти</button>
     </section>
   </div>
