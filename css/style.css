@@ -1,6 +1,12 @@
 *{
     box-sizing: border-box;
 }
+*:focus-visible{
+    outline: none;
+    border: 2px solid #68A2CA;
+    border-radius: 4px;
+}
+
 body {
     font-family: "PT Sans";
     font-size: 22px;
@@ -8,15 +14,14 @@ body {
     margin: 0 auto;
     box-shadow: -40px 0 37px 0 rgba(227, 227, 227, 1),
                  40px 0 37px 0 rgba(227, 227, 227, 1);
+    box-sizing: content-box;
 }
-input:focus{
-    outline: none;
-    border: 2px solid #68A2CA;
-}
+
 .header-main {
     width: 1200px;
     height: 64px;
     margin: 0 auto;
+    display: block;
 }
 
 .main-nav {
@@ -27,6 +32,7 @@ input:focus{
 .navigation{
     display: flex;
     justify-content: space-between;
+    min-height: 64px;
 }
 
 .logo {
@@ -39,13 +45,15 @@ input:focus{
     list-style: none;
     align-items: center;
     flex-wrap: wrap;
-    margin: 0;
+    margin: 0 285px 0 0;
     padding: 0;
     height: 64px;
 }
 
 .site-navigation-item a{
-    margin: 18px 15px;
+    margin: 0 15px;
+    padding-top: 18px;
+    display: block;
     text-decoration: none;
     color: #000;
     font-size: 20px;
@@ -53,11 +61,12 @@ input:focus{
     font-weight: 700;
     line-height: 24px;
     text-transform: capitalize;
-
+    height: 64px;
 }
+
 .site-navigation-item a:hover {
     border-bottom: 1px solid #756257;
-    padding-bottom: 18px;
+    padding-bottom: 20px;
 }
 
 
@@ -67,6 +76,25 @@ input:focus{
     justify-content: space-between;
     align-items: center;
     gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.icons-heart{
+    position: relative;
+}
+.icons-heart p{
+    position: absolute;
+    top: -5px;
+    left: 10px;
+    margin: 0;
+    background-color: #7DB54F;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 10px;
+    line-height: 10px;
+    color: #FFFFFF;
 }
 
 .nav-button {
@@ -88,6 +116,7 @@ input:focus{
 
 .nav-button:hover{
     background-color: #615048;
+    cursor: pointer;
 }
 
 .nav-button:active{
@@ -132,7 +161,6 @@ input:focus{
     padding: 0;
     margin: 0 0 62px 0;
     width: 1200px;
-    position: relative;
 }
 
 .advantage-item {
@@ -171,7 +199,7 @@ input:focus{
     transform: translate(0, -50%);
     top: 50%;
     margin: 0 auto;
-    height: 181px;
+    min-height: 181px;
     width: 230px;
     text-align: center;
 }
@@ -191,9 +219,10 @@ input:focus{
     margin: 30px 0 0 0;
     line-height: 21px;
     width: 230px;
-    height: 42px;
+    min-height: 42px;
     font-weight: 400;
     white-space: nowrap;
+    align-items: center;
 }
 
 .advantage-item:nth-child(3), .advantage-item:nth-child(4), .advantage-item:nth-child(5){
@@ -241,12 +270,12 @@ input:focus{
     display: flex;
     flex-wrap: wrap;
     padding: 0;
-    margin: 0;
+    margin: 65px 0 0 0;
 }
 
 
 .peculiarity-list {
-    margin: 65px 0 0 0;
+    margin: 0;
     text-align: center;
     list-style: none;
     width: 400px;
@@ -335,6 +364,7 @@ input:focus{
 
 .button-search:hover{
     background-color: #615048;
+    cursor: pointer;
 }
 
 .button-search:active{
@@ -347,6 +377,7 @@ input:focus{
 }
 
 .mail {
+    background-color: #68A2CA;
     background-image: url("../img/email-fon.svg");
     text-align: center;
     color: #FFFFFF;
@@ -388,9 +419,15 @@ input:focus{
     font-size: 18px;
     line-height: 24px;
     background-color: #F2F2F2;
+    border: 3px solid transparent;
+
 }
 
+.mail-input:focus-visible {
 
+    border: 2px solid #68A2CA;
+    box-sizing: content-box;
+}
 
 .button-mail {
     width: 232px;
@@ -409,6 +446,7 @@ input:focus{
 
 .button-mail:hover{
     background-color: #68A2CA;
+    cursor: pointer;
 }
 .button-mail:active{
     color: rgba(255, 255, 255, 0.3);
@@ -455,9 +493,11 @@ input:focus{
 
 .hero{
     background-image: url("../img/fon-filter.png");
+    background-color: #68A2CA;
     background-repeat: no-repeat;
+    background-size: cover;
     width: 1200px;
-    height: 412px;
+    height: 408px;
     padding: 35px 70px 70px 70px;
 }
 
@@ -479,13 +519,29 @@ input:focus{
     width: 114px;
     align-items: center;
     justify-content: space-between;
-
+    list-style: none;
+    padding: 0;
 }
 
 .home p{
     margin: 0;
     font-size: 16px;
 }
+.home a{
+    position: relative;
+}
+.home a::before{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/before.svg");
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    left: 25px;
+    top: 9px;
+}
+
 
 
 
@@ -534,8 +590,7 @@ input:focus{
     height: 0;
     width: 0;
 }
-.checkmark:active{
-    opacity: 100%;
+.checkmark:focus{
     border: 3px solid #83B3D3;
 }
 
@@ -708,35 +763,7 @@ input:focus{
     font-weight: 700;
     width: 143px;
 }
-.slidecontainer {
-    width: 287px;
-}
 
-.slider {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 5px;
-    background: #ffffff;
-    outline: none;
-}
-
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #ffffff;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.slider::-moz-range-thumb {
-    width: 25px;
-    height: 20px;
-    background: #ffffff;
-    cursor: pointer;
-}
 
 
 .button-test{
@@ -762,6 +789,7 @@ input:focus{
 
 .filter-button:hover{
     background-color: #68A2CA;
+    cursor: pointer;
 }
 .filter-button:active{
     color: rgba(255, 255, 255, 0.3);
@@ -780,15 +808,19 @@ input:focus{
     font-weight: 700;
     text-align: center;
     width: 191px;
+    border: 3px solid transparent;
+    box-sizing: content-box;
 }
 
 .clear-button:hover{
     opacity: 60%;
+    cursor: pointer;
 }
 
-.clear-button:active{
+.clear-button:focus-visible{
     opacity: 100%;
     border: 3px solid #83B3D3;
+    box-sizing: content-box;
 }
 
 .hotel {
@@ -843,8 +875,16 @@ input:focus{
     padding: 14px 12px;
 }
 
+.areal:hover{
+    cursor: pointer;
+}
+
 .areal:focus{
     border: 2px solid #000000;
+}
+
+.areal:focus-visible{
+    border: 2px solid #68A2CA;
 }
 
 
@@ -914,11 +954,14 @@ input:focus{
 }
 .details:hover{
    background: #615048;
+   cursor: pointer;
 }
 .details:active{
     color: rgba(255, 255, 255, 0.3);
 }
-
+.details:focus-visible{
+    background: #615048;
+}
 
 .favorite {
     font-family: "PT Sans";
@@ -938,10 +981,15 @@ input:focus{
 
 .favorite:hover{
     background-color: #68A2CA;
+    cursor: pointer;
 }
 .favorite:active{
     color: rgba(255, 255, 255, 0.3);
 }
+.favorite:focus-visible{
+    background-color: #68A2CA;
+}
+
 
 .favorite-style {
     font-family: "PT Sans";
@@ -961,9 +1009,13 @@ input:focus{
 
 .favorite-style:hover{
     background-color: #6C9E42;
+    cursor: pointer;
 }
 .favorite-style:active{
     color: rgba(255, 255, 255, 0.3);
+}
+.favorite-style:focus-visible{
+    background-color: #6C9E42;
 }
 
 .star {
@@ -1041,10 +1093,15 @@ input:focus{
 
 .number-item:hover{
     background-color: #68A2CA;
+    cursor: pointer;
 }
 .number-item:active{
     color: rgba(255, 255, 255, 0.3);
 }
+.number-item:focus-visible{
+    background-color: #68A2CA;
+}
+
 
 .number-item-pass {
     width: 60px;
