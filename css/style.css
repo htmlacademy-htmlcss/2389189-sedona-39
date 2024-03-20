@@ -5,6 +5,7 @@
     outline: none;
     border: 2px solid #68A2CA;
     border-radius: 4px;
+
 }
 button:hover{
     cursor: pointer;
@@ -1394,3 +1395,59 @@ body {
     text-transform: uppercase;
     border-style: none;
 }
+
+.tooltip {
+    position: absolute;
+    margin-top: 4px;
+    margin-left: 45px;
+    width: 26px;
+    height: 26px;
+}
+
+.tooltip-toggle {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    display: block;
+    width: 26px;
+    height: 26px;
+}
+
+
+.tooltip-toggle:hover .tooltip-icon {
+    color: #AF7842;
+}
+.tooltip-text {
+    background-color: #242424;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: normal;
+    text-transform: none;
+    padding: 15px 18px 18px 18px;
+    border-radius: 8px;
+    width: 216px;
+    position: absolute;
+    top: 100%;
+    margin-top: 15px;
+    left: 80%;
+    transform: translateX(-50%);
+    z-index: 1;
+    display: none;
+  }
+  .tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+.tooltip-text:after {
+    content:'';
+    background-image: url("../img/tooltip.svg");
+    width: 19px;
+    height: 9px;
+    position:absolute;
+    bottom: 100%;
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+  }
