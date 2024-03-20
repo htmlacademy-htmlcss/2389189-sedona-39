@@ -6,6 +6,9 @@
     border: 2px solid #68A2CA;
     border-radius: 4px;
 }
+button:hover{
+    cursor: pointer;
+}
 
 body {
     font-family: "PT Sans";
@@ -70,6 +73,7 @@ body {
 }
 
 
+
 .icons {
     height: 64px;
     display: flex;
@@ -121,6 +125,9 @@ body {
 
 .nav-button:active{
     color: rgba(255, 255, 255, 0.3);
+}
+.nav-button:focus-visible{
+    background-color: #615048;
 }
 /*шапка*/
 
@@ -1160,6 +1167,10 @@ body {
 .social a:active{
     opacity: 30%;
 }
+.social a:focus-visible path{
+    border-style: none;
+    fill: #68A2CA;
+}
 
 .footer-main a {
     text-decoration: none;
@@ -1233,7 +1244,12 @@ body {
     border-radius: 50%;
     background-color: #F2F2F2;
 }
-
+.modal-close-button:focus-visible{
+    border: 2px solid #83B3D3;
+}
+.modal-close-button:hover{
+    background-color: #E6E6E6;
+}
 .modal-content {
     display: flex;
     flex-wrap: wrap;
@@ -1312,29 +1328,48 @@ body {
 }
 
 .button-number{
-    display: flex;
+   display: flex;
    width: 110px;
+   height: 48px;
    margin-left: 48px;
    border-style: none;
-
+   background-color: #F2F2F2;
+   border-radius: 5px;
 }
 .button-minus{
     border-style: none;
-    width: 40px;
-    background-color: #F2F2F2;
+    width: 20px;
+    height: 20px;
     color: #7561574D;
+    background-image: url("../img/minus.svg");
+    background-repeat: no-repeat;
+    background-position: top 10px left 5px;
+    padding: 0;
+    margin: 14px 10px;
 }
+.button-minus:focus-visible{
+    border: 2px solid #83B3D3;
+}
+
 .button-plus{
     border-style: none;
-    width: 40px;
-    background-color: #F2F2F2;
+    width: 20px;
+    height: 20px;
     color: #7561574D;
+    background-image: url("../img/plus.svg");
+    background-repeat: no-repeat;
+    background-position: top 4px left 2px;
+    padding: 0;
+    margin: 14px 10px;
 }
+.button-plus:focus-visible{
+    border: 2px solid #83B3D3;
+}
+
 
 .input-plus-minus {
     padding: 0;
     width: 31px;
-    height: 48px;
     background-color: #F2F2F2;
     border-style: none;
     font-family: "PT Sans";

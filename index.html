@@ -13,19 +13,19 @@
 <body>
     <header class="header-main">
       <nav class="main-nav">
-        <div class="navigation">
+        <div class="navigation" >
           <a class="logo" href="index.html">
             <img src="img/logo.png" width="140" height="70" alt="logo">
           </a>
         <ul class="site-navigation">
           <li class="site-navigation-item">
-            <a href="#">Главная</a>
+            <a href="#" >Главная</a>
           </li>
           <li class="site-navigation-item">
-            <a href="#">О Седоне</a>
+            <a href="#" tabindex="0">О Седоне</a>
           </li>
           <li class="site-navigation-item">
-            <a href="catalog.html">Гостиницы</a>
+            <a href="catalog.html" tabindex="0">Гостиницы</a>
           </li>
         </ul>
         <ul class="icons">
@@ -185,19 +185,21 @@
       </a>
 
     </footer>
-<div class="modal-container  modal-container-close">
+<div class="modal-container  /*modal-container-close">
   <div class="modal modal-auth">
     <button class="modal-close-button" type="button">
       <span class="visually-hidden"></span>
     </button>
     <section class="modal-content">
       <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+
       <div class="field-group">
         <h3 class="title-text">Дата Заезда:</h3>
         <label class="visually-hidden" for="auth-data"></label>
         <input class="auth-form-field field" type="text" id="auth-data" name="auth-data" placeholder="27 апреля 2020">
       </div>
       <p class="modal-line-red">Мы не можем отправить вас в прошлое.</p>
+
       <div class="field-group">
         <h3 class="title-text">Дата Выезда:</h3>
         <label class="visually-hidden" for="auth-data-none"></label>
@@ -208,22 +210,24 @@
       <div class="number-adults">
         <h3 class="title-text">Взрослые:</h3>
         <div class="button-number">
-          <button type="button" class="button-minus">-</button>
+          <button type="button" class="button-minus"></button>
           <input type="text" class="input-plus-minus">
-          <button type="button" class="button-plus">+</button>
+          <button type="button" class="button-plus">  </button>
         </div>
       </div>
 
       <div class="number-childs">
         <h3 class="title-text">Дети:</h3>
+
         <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="13" cy="13" r="13" fill="#83B3D3"/>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"/>
         </svg>
         <div class="button-number">
-          <button type="button" class="button-minus">-</button>
+          <button type="button" class="button-minus">
+          </button>
           <input type="text" class="input-plus-minus">
-          <button type="button" class="button-plus">+</button>
+          <button type="button" class="button-plus"></button>
         </div>
       </div>
 
