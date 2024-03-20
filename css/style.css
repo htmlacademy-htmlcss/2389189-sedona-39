@@ -3,9 +3,6 @@
 }
 *:focus-visible{
     outline: none;
-    border: 2px solid #68A2CA;
-    border-radius: 4px;
-
 }
 button:hover{
     cursor: pointer;
@@ -49,14 +46,14 @@ body {
     list-style: none;
     align-items: center;
     flex-wrap: wrap;
-    margin: 0 285px 0 0;
+    margin: 0 305px 0 0;
     padding: 0;
     height: 64px;
 }
 
 .site-navigation-item a{
     margin: 0 15px;
-    padding-top: 18px;
+    padding-top: 20px;
     display: block;
     text-decoration: none;
     color: #000;
@@ -72,7 +69,10 @@ body {
     border-bottom: 1px solid #756257;
     padding-bottom: 20px;
 }
-
+.site-navigation-item a:focus-visible {
+    border-bottom: 1px solid #756257;
+    padding-bottom: 20px;
+}
 
 
 .icons {
@@ -85,7 +85,9 @@ body {
     padding: 0;
     margin: 0;
 }
-
+.icons a:focus path{
+    fill: #68A2CA;
+}
 .icons-heart{
     position: relative;
 }
@@ -129,6 +131,9 @@ body {
 }
 .nav-button:focus-visible{
     background-color: #615048;
+}
+.nav-button:disabled{
+    background-color: #E5E5E5;
 }
 /*шапка*/
 
@@ -190,12 +195,12 @@ body {
 }
 .advantage-item:nth-child(3),  .advantage-item:nth-child(5){
     background-color: #83B3D31F;
-    padding-top: 15px;
+    padding-top: 20px;
 
 }
 .advantage-item:nth-child(4){
     background-color: #83B3D333;
-    padding-top: 15px;
+    padding-top: 20px;
 
 }
 .advantage-item:nth-child(7){
@@ -250,7 +255,7 @@ body {
 }
 
 .peculiarity {
-    margin: 0 0 95px 0;
+    margin: 0 0 97px 0;
     padding: 0;
 }
 
@@ -293,20 +298,20 @@ body {
 .peculiarity-list:nth-child(1) {
     background-image: url("../img/Domik.svg");
     background-repeat: no-repeat;
-    background-size: 75px 72px;
+    background-size: 77px 72px;
     background-position: top 81px left 162px;
     background-color: #83B3D31F;
 }
 .peculiarity-list:nth-child(2) {
     background-image: url("../img/Burger.svg");
     background-repeat: no-repeat;
-    background-size: 75px 72px;
+    background-size: 77px 72px;
     background-position: top 81px left 162px;
 }
 .peculiarity-list:nth-child(3){
     background-image: url("../img/podarok.svg");
     background-repeat: no-repeat;
-    background-size: 75px 72px;
+    background-size: 77px 72px;
     background-position: top 81px left 162px;
     background-color: #83B3D31F;
 }
@@ -381,7 +386,9 @@ body {
 }
 .button-search:disabled{
     background-color: #E5E5E5;
-
+}
+.button-search:focus-visible{
+    background-color: #615048;
 }
 
 .mail {
@@ -398,12 +405,14 @@ body {
     line-height: 36px;
     font-weight: 700;
     padding-top: 96px;
+    margin-bottom: 20px;
 }
 
 .mail p{
     font-size: 22px;
     line-height: 26px;
     font-weight: 400;
+
 }
 
 .input {
@@ -420,7 +429,7 @@ body {
 .mail-input {
     border-radius: 4px 0 0 4px;
     border-style: none;
-    padding: 12px 20px;
+    padding: 11px 17px;
     width: 452px;
     color: #5a5a5a;
     font-family: "PT Sans";
@@ -462,9 +471,9 @@ body {
 .button-mail:disabled{
     background-color: #E5E5E5;
 }
-
-
-
+.button-mail:focus{
+    background-color: #68A2CA;
+}
 
 
 
@@ -584,23 +593,12 @@ body {
 
   }
 
-.container:hover{
-    opacity: 30%;
-}
-.container:active{
-    opacity: 100%;
-}
-
 .container input {
     position: relative;
     opacity: 0;
     cursor: pointer;
-    height: 0;
-    width: 0;
 }
-.checkmark:focus{
-    border: 3px solid #83B3D3;
-}
+
 
 .checkmark {
     position: absolute;
@@ -608,10 +606,13 @@ body {
     left: 0;
     height: 20px;
     width: 20px;
-    background-color: #eee;
+    background-color: #ffffff;
     border-radius: 25%;
 }
-
+.checkmark:focus-visible{
+    opacity: 100%;
+    border: 3px solid #68A2CA;
+}
   .container input:checked ~ .checkmark {
     background-color: #ffffff;
   }
@@ -666,10 +667,6 @@ body {
     height: 0;
     width: 0;
   }
-  .form-radio-hidden .radio:hover{
-    opacity: 100%;
-    border: 3px solid #83B3D3;
-}
 
 
   .form-radio-hidden .radio{
@@ -760,6 +757,12 @@ body {
     font-weight: 700;
     width: 143px;
 }
+.before:hover{
+    background-color: #E6E6E6;
+}
+.before:focus-visible{
+    border: 3px solid #82B3D3;
+}
 
 .after {
     padding: 12px 20px;
@@ -771,7 +774,12 @@ body {
     font-weight: 700;
     width: 143px;
 }
-
+.after:hover{
+    background-color: #E6E6E6;
+}
+.after:focus-visible{
+    border: 3px solid #82B3D3;
+}
 
 
 .button-test{
@@ -802,6 +810,12 @@ body {
 .filter-button:active{
     color: rgba(255, 255, 255, 0.3);
 }
+.filter-button:focus-visible{
+    background-color: #68A2CA;
+}
+.filter-button:disabled{
+    background-color:#E5E5E5;
+}
 
 .clear-button {
     margin-top: 32px;
@@ -829,6 +843,12 @@ body {
     opacity: 100%;
     border: 3px solid #83B3D3;
     box-sizing: content-box;
+}
+.clear-button:active{
+    opacity: 30%;
+}
+.clear-button:disabled{
+    opacity: 10%;
 }
 
 .hotel {
@@ -867,10 +887,23 @@ body {
     line-height: 21px;
     font-family: "PT Sans";
     border-radius: 4px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("../img/select.svg");
+    background-repeat: no-repeat;
+    background-position: top 50% left 95%;
 }
-.hotel-select:focus{
+.hotel-select:hover{
     outline: none;
     border: 2px solid #68A2CA;
+}
+.hotel-select:focus-visible{
+    border: 2px solid #68A2CA;
+}
+.hotel-select:disabled{
+    opacity: 30%;
 }
 
 
@@ -885,9 +918,10 @@ body {
 
 .areal:hover{
     cursor: pointer;
+    border: 2px solid #000000;
 }
 
-.areal:focus{
+.areal:active{
     border: 2px solid #000000;
 }
 
@@ -970,6 +1004,9 @@ body {
 .details:focus-visible{
     background: #615048;
 }
+.details:disabled{
+    background: #E5E5E5;
+}
 
 .favorite {
     font-family: "PT Sans";
@@ -997,7 +1034,9 @@ body {
 .favorite:focus-visible{
     background-color: #68A2CA;
 }
-
+.favorite:disabled{
+    background-color: #E5E5E5;
+}
 
 .favorite-style {
     font-family: "PT Sans";
@@ -1024,6 +1063,9 @@ body {
 }
 .favorite-style:focus-visible{
     background-color: #6C9E42;
+}
+.favorite-style:disabled{
+    background-color: #E5E5E5;
 }
 
 .star {
@@ -1062,6 +1104,7 @@ body {
     line-height: 20px;
     font-weight: 400;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .number-list {
@@ -1196,13 +1239,12 @@ body {
 .tel:active{
     opacity: 30%;
 }
-.logo-html:hover path {
+.logo-html:hover path, .logo-html:focus-visible path{
     fill: #756157;
 }
 .logo-html:active{
     opacity: 30%;
 }
-
 
 /*форма*/
 
@@ -1347,6 +1389,7 @@ body {
     background-position: top 10px left 5px;
     padding: 0;
     margin: 14px 10px;
+    box-sizing: border-box;
 }
 .button-minus:focus-visible{
     border: 2px solid #83B3D3;
