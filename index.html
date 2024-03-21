@@ -11,7 +11,7 @@
     <title>HTML Academy: Седона</title>
   </head>
 <body>
-    <header class="header-main">
+    <header class="header-main" data-test="header">
       <nav class="main-nav">
         <div class="navigation" >
           <a class="logo" href="index.html">
@@ -50,17 +50,17 @@
 
     </header>
 
-    <main>
-      <section class="page">
+    <main data-test="main">
+      <section class="page" data-test="page">
         <img class="image-sedona" src="img/welcome.svg" alt="welcome" width="458" height="352">
       </section>
 
-      <section class="item">
+      <section class="item" data-test="item">
         <h1>Седона — небольшой городок в Аризоне, <br>заслуживающий большего!</h1>
         <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
       </section>
 
-      <section class="advantages-item">
+      <section class="advantages-item" data-test="advantages-item">
           <ul class="advantages">
             <li class="advantage-item">
               <div class="advantage-item-text">
@@ -107,7 +107,7 @@
 </section>
 
 
-      <section class="peculiarity">
+      <section class="peculiarity" data-test="peculiarity">
         <h2>Приезжайте в Седону отдохнуть <br> в комфорте и уюте!</h2>
         <p>Опытный персонал и качественное обслуживание!</p>
            <ul class="peculiarity-items">
@@ -128,7 +128,7 @@
            </ul>
       </section>
 
-      <section class="search">
+      <section class="search" data-test="search">
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 
@@ -138,7 +138,7 @@
 
       </section>
 
-      <article class="mail">
+      <article class="mail" data-test="mail">
           <h2>Подпишитесь на рассылку</h2>
           <p>Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <div class="input">
@@ -147,7 +147,7 @@
           </div>
         </article>
     </main>
-    <footer class="footer-main">
+    <footer class="footer-main" data-test="footer-main">
       <div class="social">
         <a href="https://vk.com/htmlacademy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="14" viewBox="0 0 24 14" fill="none">
           <rect width="24" height="14" fill="#E5E5E5"/><rect x="-51" y="-177" width="610" height="1002.42" rx="30" fill="white"/>
@@ -189,7 +189,7 @@
       </a>
 
     </footer>
-<div class="modal-container modal-container-close">
+<div class="modal-container modal-container-close" data-test="modal-container">
   <div class="modal modal-auth">
     <button class="modal-close-button" type="button">
       <span class="visually-hidden"></span>
