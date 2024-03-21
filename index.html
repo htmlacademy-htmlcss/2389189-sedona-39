@@ -51,6 +51,10 @@
     </header>
 
     <main>
+      <section class="page">
+        <img class="image-sedona" src="img/welcome.svg" alt="welcome" width="458" height="352">
+      </section>
+
       <section class="item">
         <h1>Седона — небольшой городок в Аризоне, <br>заслуживающий большего!</h1>
         <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -196,14 +200,14 @@
       <div class="field-group">
         <h3 class="title-text">Дата Заезда:</h3>
         <label class="visually-hidden" for="auth-data"></label>
-        <input class="auth-form-field field" type="text" id="auth-data" name="auth-data" placeholder="27 апреля 2020">
+        <input class="auth-form-field field" type="text" id="auth-data" name="auth-data" value="27 апреля 2020">
       </div>
       <p class="modal-line-red">Мы не можем отправить вас в прошлое.</p>
 
       <div class="field-group">
         <h3 class="title-text">Дата Выезда:</h3>
         <label class="visually-hidden" for="auth-data-none"></label>
-        <input class="auth-form-field field" type="text" id="auth-data-none" name="auth-data" placeholder="1 сентября 2023">
+        <input class="auth-form-field field" type="text" id="auth-data-none" name="auth-data" value="1 сентября 2023">
       </div>
       <p class="modal-line-black">На эти даты есть свободные номера. Пока есть.</p>
 
@@ -211,7 +215,7 @@
         <h3 class="title-text">Взрослые:</h3>
         <div class="button-number">
           <button type="button" class="button-minus"></button>
-          <input type="text" class="input-plus-minus">
+          <input type="text" class="input-plus-minus" value="2">
           <button type="button" class="button-plus">  </button>
         </div>
       </div>
@@ -232,7 +236,7 @@
         <div class="button-number">
           <button type="button" class="button-minus">
           </button>
-          <input type="text" class="input-plus-minus">
+          <input type="text" class="input-plus-minus" value="2">
           <button type="button" class="button-plus"></button>
         </div>
       </div>
