@@ -109,8 +109,8 @@ body {
 
 .icons-heart p{
     position: absolute;
-    top: -5px;
-    left: 10px;
+    top: -7px;
+    left: 7px;
     margin: 0;
     background-color: #7DB54F;
     border-radius: 50%;
@@ -559,7 +559,7 @@ img{
     display: inline-flex;
     margin: 0;
     color: #FFF;
-    height: 21px;
+    height: 20px;
     width: 114px;
     align-items: center;
     justify-content: space-between;
@@ -569,6 +569,7 @@ img{
 
 .home a{
     position: relative;
+    margin-top: 10px;
 }
 
 .home-list-item-before::before{
@@ -579,8 +580,8 @@ img{
     background-repeat: no-repeat;
     content: "";
     position: absolute;
-    left: 25px;
-    top: 9px;
+    left: 23px;
+    top: 12px;
 }
 
 .home-list-item{
@@ -755,7 +756,7 @@ input[name="button-radio"]:focus-visible + span {
 .cost {
     width: 289px;
     display: flex;
-    margin-bottom: 36px;
+    margin-bottom: 34px;
 }
 
 .cost-areal {
@@ -769,8 +770,8 @@ input[name="button-radio"]:focus-visible + span {
     color: #000000;
     opacity: 30%;
     position: absolute;
-    padding-left: 110px;
-    padding-top: 10px;
+    padding-left: 105px;
+    padding-top: 12px;
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
@@ -857,20 +858,20 @@ input[name="button-radio"]:focus-visible + span {
 }
 
 .clear-button {
-    margin-top: 32px;
+    margin-top: 30px;
     background-color: transparent;
     border-style: none;
     padding: 8px 55px;
-    border-radius: 4px;
     color: #FFFFFF;
     font-family: "PT Sans", sans-serif;
     font-size: 16px;
     line-height: 20px;
     font-weight: 700;
     text-align: center;
-    width: 191px;
-    border: 3px solid transparent;
+    width: 80px;
+    border: 2px solid transparent;
     box-sizing: content-box;
+    border-radius: 4px;
 }
 
 .clear-button:hover{
@@ -893,8 +894,7 @@ input[name="button-radio"]:focus-visible + span {
 }
 
 .hotel {
-    margin: 0 auto;
-    padding: 50px 0 25px 0;
+    margin: 55px auto 25px;
     width: 1060px;
     border-bottom: 1px solid #E6E6E6;
 }
@@ -920,7 +920,7 @@ input[name="button-radio"]:focus-visible + span {
 
 .hotel-select {
     width: 292px;
-    padding: 12px 20px 12px 16px;
+    padding: 12px 20px 12px 20px;
     border-color: #E5E5E5;
     font-size: 18px;
     font-weight: 400;
@@ -933,7 +933,7 @@ input[name="button-radio"]:focus-visible + span {
     appearance: none;
     background-image: url("../img/select.svg");
     background-repeat: no-repeat;
-    background-position: top 50% left 95%;
+    background-position: top 50% left 93%;
 }
 
 .hotel-select:hover{
@@ -947,6 +947,12 @@ input[name="button-radio"]:focus-visible + span {
 
 .hotel-select:disabled{
     opacity: 30%;
+}
+
+.button-areal{
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .areal {
@@ -975,8 +981,7 @@ input[name="button-radio"]:focus-visible + span {
     display: flex;
     flex-wrap: wrap;
     gap: 17px;
-    padding: 0;
-    margin: 40px 0 0 0;
+    padding: 17px 0 20px 0;
 }
 
 .hotel-items {
@@ -984,7 +989,7 @@ input[name="button-radio"]:focus-visible + span {
     padding: 20px;
     border: 1px solid #E6E6E6;
     border-radius: 4px;
-    margin-bottom: 19px;
+    margin-bottom: 2px;
 }
 .hotel-items a{
     text-decoration: none;
@@ -1236,6 +1241,7 @@ input[name="button-radio"]:focus-visible + span {
     line-height: 36px;
     font-weight: 700;
     padding-top: 96px;
+    margin: 0;
 }
 
 .mail-catalog p{
