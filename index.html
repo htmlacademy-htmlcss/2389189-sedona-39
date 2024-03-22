@@ -51,15 +51,16 @@
   </header>
 
   <main data-test="main">
-    <section class="page" data-test="page">
+    <section class="hero" data-test="hero">
+       <h1 class="visually-hidden-title">Добро пожаловать в Седону</h1>
       <img class="image-sedona" src="img/welcome.svg" alt="Добро пожаловать Гостиницы Седоны" width="458" height="352">
-      <h1></h1>
+
     </section>
 
-      <h2 class="hero-title">Седона — небольшой городок в Аризоне, <br>заслуживающий большего!</h1>
-
-      <section class="item" data-test="item">
-      <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+    <section class="item" data-test="item">
+      <h2 class="visually-hidden-title"></h2>
+      <p class="item-title">Седона — небольшой городок в Аризоне, <br>заслуживающий большего!</p>
+      <p class="item-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
     </section>
 
     <section class="advantages-item" data-test="advantages-item">
@@ -183,14 +184,14 @@
       <div class="field-group">
         <label class="visually-hidden" for="auth-data">
           <span class="visually-hidden-text">Дата Заезда:</span></label>
-        <input class="auth-form-field field" type="text" id="auth-data" name="auth-data" value="27 апреля 2020">
+        <input class="auth-form-field field" type="text" id="auth-data" name="auth-data" value="27 апреля 2020" placeholder="Укажите дату Заезда">
       </div>
       <p class="modal-line-red">Мы не можем отправить вас в прошлое.</p>
 
       <div class="field-group">
         <label class="visually-hidden" for="auth-data-none">
           <span class="visually-hidden-text">Дата Выезда:</span></label>
-        <input class="auth-form-field field" type="text" id="auth-data-none" name="auth-data" value="1 сентября 2023">
+        <input class="auth-form-field field" type="text" id="auth-data-none" name="auth-data" value="1 сентября 2023" placeholder="Укажите дату выезда">
       </div>
       <p class="modal-line-black">На эти даты есть свободные номера. Пока есть.</p>
 

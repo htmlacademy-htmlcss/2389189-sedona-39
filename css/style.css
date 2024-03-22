@@ -45,6 +45,7 @@ body {
     justify-content: space-between;
     margin: 0 70px;
 }
+
 .navigation{
     display: flex;
     justify-content: space-between;
@@ -85,11 +86,11 @@ body {
     border-bottom: 1px solid #756257;
     padding-bottom: 20px;
 }
+
 .site-navigation-item a:focus-visible {
     border-bottom: 1px solid #756257;
     padding-bottom: 20px;
 }
-
 
 .icons {
     height: 64px;
@@ -105,6 +106,7 @@ body {
 .icons-heart{
     position: relative;
 }
+
 .icons-heart p{
     position: absolute;
     top: -5px;
@@ -143,53 +145,66 @@ body {
 .nav-button:active{
     color: rgba(255, 255, 255, 0.3);
 }
+
 .nav-button:focus-visible{
     background-color: #615048;
 }
+
 .nav-button:disabled{
     background-color: #E5E5E5;
 }
-/*шапка*/
-
 
 main{
     flex-grow: 1;
 }
 
-.page{
+.hero{
     display: block;
     width: 1200px;
     height: 485px;
-    margin: 0 auto;
     background-image: url("../img/background.svg"), url("../img/index-background.png");
     background-repeat: no-repeat;
     background-size: 100%, cover;
     background-position: top 100% left, bottom 100% left;
     background-color: #68A2CA;
 }
+
 .image-sedona{
-    display: block;
-    margin: 0 auto;
-    padding-top: 51px;
+    margin: 51px 371px;
 }
 
-.hero-title {
-    padding-top: 48px;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 36px;
-    text-transform: uppercase;
+img{
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.visually-hidden-title{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.item-title {
+    margin: 0 auto;
     text-align: center;
-    margin: 0 0 25px 0;
+    margin-bottom: 25px;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .item {
-    margin: 0;
+    margin: 69px 0 0 0;
     padding: 0;
-
 }
-.item p{
+
+.item-text{
     padding: 0;
     font-size: 22px;
     font-style: normal;
@@ -199,12 +214,11 @@ main{
     margin: 0 0 90px 0;
 }
 
-
 .advantages{
     display: flex;
     flex-wrap: wrap;
     padding: 0;
-    margin: 0 0 62px 0;
+    margin: 0 0 65px 0;
     width: 1200px;
 }
 
@@ -215,24 +229,26 @@ main{
     height: 385px;
     width: 400px;
     color: #FFFFFF;
-
 }
 
 .advantage-item:nth-child(1){
     background-color: rgb(130, 179, 211);
-
 }
+
 .advantage-item:nth-child(2), .advantage-item:nth-child(6){
     width: 800px;
 }
+
 .advantage-item:nth-child(3),  .advantage-item:nth-child(5){
     background-color: rgba(131, 179, 211, 0.122);
-    padding-top: 20px;
+    padding-top: 25px;
 }
+
 .advantage-item:nth-child(4){
     background-color: rgba(131, 179, 211, 0.2);
-    padding-top: 20px;
+    padding-top: 25px;
 }
+
 .advantage-item:nth-child(7){
     background-color: rgb(130, 179, 211);
 }
@@ -256,25 +272,27 @@ main{
     padding-bottom: 30px;
     position: relative;
 }
+
 .advantage-title::after {
     content: "";
     position: absolute;
     height: 2px;
     width: 60px;
-    top: 85px;
-    left: 80px;
+    top: 87px;
+    left: 85px;
     background-color: #FFFFFF4D;
-  }
-  .line-black::after{
+}
+
+.line-black::after{
     content: "";
     position: absolute;
     height: 2px;
     width: 60px;
     top: 85px;
-    left: 80px;
+    left: 85px;
     background-color: #000000;
     opacity: 30%;
-  }
+}
 
 .advantage-item p{
     font-size: 18px;
@@ -292,15 +310,8 @@ main{
     color: #000000;
 }
 
-.create-line {
-    width: 60px;
-    border-top: 2px solid #FFFFFF4D;
-    margin: 0 auto;
-  }
-
-
 .peculiarity {
-    margin: 0 0 97px 0;
+    margin: 0 0 95px 0;
     padding: 0;
 }
 
@@ -314,6 +325,7 @@ main{
     text-align: center;
     margin: 0 0 20px 0;
 }
+
 .peculiarity p{
     margin: 0;
     padding: 0;
@@ -331,7 +343,6 @@ main{
     margin: 65px 0 0 0;
 }
 
-
 .peculiarity-list {
     margin: 0;
     text-align: center;
@@ -347,12 +358,14 @@ main{
     background-position: top 81px left 162px;
     background-color: rgba(131, 179, 211, 0.122);
 }
+
 .peculiarity-list:nth-child(2) {
     background-image: url("../img/burger.svg");
     background-repeat: no-repeat;
     background-size: 77px 72px;
     background-position: top 81px left 162px;
 }
+
 .peculiarity-list:nth-child(3){
     background-image: url("../img/souvenir.svg");
     background-repeat: no-repeat;
@@ -360,7 +373,6 @@ main{
     background-position: top 81px left 162px;
     background-color: rgba(131, 179, 211, 0.122);
 }
-
 
 .peculiarity-list h3{
     margin: 0;
@@ -380,8 +392,8 @@ main{
 .search {
     margin: 0;
     padding: 0;
-
 }
+
 .search h2{
     font-size: 30px;
     font-style: normal;
@@ -428,11 +440,12 @@ main{
 
 .button-search:active{
     color: rgba(255, 255, 255, 0.3);
-
 }
+
 .button-search:disabled{
     background-color: #E5E5E5;
 }
+
 .button-search:focus-visible{
     background-color: #615048;
 }
@@ -458,7 +471,6 @@ main{
     font-size: 22px;
     line-height: 26px;
     font-weight: 400;
-
 }
 
 .input {
@@ -469,8 +481,6 @@ main{
     justify-content: center;
     align-content: center;
 }
-
-
 
 .mail-input {
     border-radius: 4px 0 0 4px;
@@ -483,11 +493,9 @@ main{
     line-height: 24px;
     background-color: #F2F2F2;
     border: 3px solid transparent;
-
 }
 
 .mail-input:focus-visible {
-
     border: 2px solid #68A2CA;
     box-sizing: content-box;
 }
@@ -514,9 +522,11 @@ main{
 .button-mail:active{
     color: rgba(255, 255, 255, 0.3);
 }
+
 .button-mail:disabled{
     background-color: #E5E5E5;
 }
+
 .button-mail:focus{
     background-color: #68A2CA;
 }
@@ -524,16 +534,7 @@ main{
 
 
 
-
-
-
-/*Каталог*/
-
-
-
-
-
-.hero{
+.page{
     background-image: url("../img/fon-filter.png");
     background-color: #68A2CA;
     background-repeat: no-repeat;
@@ -543,7 +544,7 @@ main{
     padding: 35px 70px 70px 70px;
 }
 
-.hero h1{
+.page h1{
     font-size: 60px;
     color: #FFFFFF;
     font-weight: 700;
@@ -553,6 +554,7 @@ main{
     margin: 0;
     padding: 0;
 }
+
 .home {
     display: inline-flex;
     margin: 0;
@@ -568,6 +570,7 @@ main{
 .home a{
     position: relative;
 }
+
 .home-list-item-before::before{
     display: block;
     width: 20px;
@@ -590,8 +593,6 @@ main{
     font-weight: 400;
 }
 
-
-
 .filter {
     display: flex;
     color: #FFF;
@@ -606,10 +607,7 @@ main{
     font-size: 20px;
     line-height: 24px;
     margin: 0 0 32px 0;
-
 }
-
-
 
 .container {
     display: block;
@@ -620,15 +618,13 @@ main{
     font-size: 18px;
     line-height: 23px;
     font-weight: 400;
-
-  }
+}
 
 .container input {
     position: relative;
     opacity: 0;
     cursor: pointer;
 }
-
 
 .checkmark {
     position: absolute;
@@ -639,24 +635,26 @@ main{
     background-color: #ffffff;
     border-radius: 25%;
 }
+
 input[type="checkbox"]:focus-visible + span {
     border: 3px solid #83B3D3;
 }
-  .container input:checked ~ .checkmark {
-    background-color: #ffffff;
-  }
 
-  .checkmark:after {
+.container input:checked ~ .checkmark {
+    background-color: #ffffff;
+}
+
+.checkmark:after {
     content: "";
     position: relative;
     display: none;
-  }
+}
 
-  .container input:checked ~ .checkmark:after {
+.container input:checked ~ .checkmark:after {
     display: block;
-  }
+}
 
-  .container .checkmark:after {
+.container .checkmark:after {
     left: 6px;
     top: 2px;
     width: 5px;
@@ -666,10 +664,7 @@ input[type="checkbox"]:focus-visible + span {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-  }
-
-
-
+}
 
 .radio-button {
     margin: 0 142px 0 70px;
@@ -682,17 +677,20 @@ input[type="checkbox"]:focus-visible + span {
     position: relative;
     align-items: center;
     margin: 0 0 20px 0;
-  }
+}
 
 .form-radio-hidden:hover{
     opacity: 30%;
 }
+
 .form-radio-hidden:active{
     opacity: 100%;
 }
+
 input[name="button-radio"]:focus-visible + span {
     border: 3px solid #83B3D3;
 }
+
 .form-radio-hidden input{
     position: absolute;
     opacity: 0;
@@ -700,7 +698,6 @@ input[name="button-radio"]:focus-visible + span {
     height: 0;
     width: 0;
 }
-
 
 .form-radio-hidden .radio{
     appearance: none;
@@ -716,6 +713,7 @@ input[name="button-radio"]:focus-visible + span {
     box-sizing: border-box;
     transition: .5s all;
 }
+
 .form-radio-hidden:hover .radio{
     background-color: #ffffff;
     box-shadow: inset 1px 2px 3px 0 rgba(0,0,0,0.1);
@@ -732,9 +730,11 @@ input[name="button-radio"]:focus-visible + span {
     left: 50%;
     transform: translate(-50%,-50%);
 }
+
 .form-radio-hidden input:checked + .radio::before{
     background-color: #3F5E72;
 }
+
 .form-radio-hidden input + .radio + .text{
     color: #ffffff;
     cursor: pointer;
@@ -758,14 +758,14 @@ input[name="button-radio"]:focus-visible + span {
     margin-bottom: 36px;
 }
 
-.test {
+.cost-areal {
     margin-right: 2px;
     display: flex;
     height: 48px;
     width: 143px;
 }
 
-.test span {
+.cost-areal span {
     color: #000000;
     opacity: 30%;
     position: absolute;
@@ -775,10 +775,10 @@ input[name="button-radio"]:focus-visible + span {
     line-height: 24px;
     font-weight: 400;
 }
-.test span:hover {
+
+.cost-areal span:hover {
     display: none;
 }
-
 
 .before {
     padding: 12px 20px;
@@ -790,9 +790,11 @@ input[name="button-radio"]:focus-visible + span {
     font-weight: 700;
     width: 143px;
 }
+
 .before:hover{
     background-color: #E6E6E6;
 }
+
 .before:focus-visible{
     border: 3px solid #82B3D3;
 }
@@ -807,13 +809,14 @@ input[name="button-radio"]:focus-visible + span {
     font-weight: 700;
     width: 143px;
 }
+
 .after:hover{
     background-color: #E6E6E6;
 }
+
 .after:focus-visible{
     border: 3px solid #82B3D3;
 }
-
 
 .button-test{
     display: flex;
@@ -840,12 +843,15 @@ input[name="button-radio"]:focus-visible + span {
     background-color: #68A2CA;
     cursor: pointer;
 }
+
 .filter-button:active{
     color: rgba(255, 255, 255, 0.3);
 }
+
 .filter-button:focus-visible{
     background-color: #68A2CA;
 }
+
 .filter-button:disabled{
     background-color:#E5E5E5;
 }
@@ -877,9 +883,11 @@ input[name="button-radio"]:focus-visible + span {
     border: 3px solid #83B3D3;
     box-sizing: content-box;
 }
+
 .clear-button:active{
     opacity: 30%;
 }
+
 .clear-button:disabled{
     opacity: 10%;
 }
@@ -889,7 +897,6 @@ input[name="button-radio"]:focus-visible + span {
     padding: 50px 0 25px 0;
     width: 1060px;
     border-bottom: 1px solid #E6E6E6;
-
 }
 
 .holel-head {
@@ -928,17 +935,19 @@ input[name="button-radio"]:focus-visible + span {
     background-repeat: no-repeat;
     background-position: top 50% left 95%;
 }
+
 .hotel-select:hover{
     outline: none;
     border: 2px solid #68A2CA;
 }
+
 .hotel-select:focus-visible{
     border: 2px solid #68A2CA;
 }
+
 .hotel-select:disabled{
     opacity: 30%;
 }
-
 
 .areal {
     height: 48px;
@@ -962,7 +971,6 @@ input[name="button-radio"]:focus-visible + span {
     border: 2px solid #68A2CA;
 }
 
-
 .hotel-list {
     display: flex;
     flex-wrap: wrap;
@@ -982,6 +990,7 @@ input[name="button-radio"]:focus-visible + span {
     text-decoration: none;
     color: #000000;
 }
+
 .hotel-items h3{
     margin: 0;
     font-size: 24px;
@@ -994,13 +1003,13 @@ input[name="button-radio"]:focus-visible + span {
     display: flex;
     justify-content: space-between;
 }
+
 .price p{
     margin: 0;
     font-size: 18px;
     line-height: 21px;
     font-weight: 400;
     color: #333333;
-
 }
 
 .hotel-button {
@@ -1009,7 +1018,6 @@ input[name="button-radio"]:focus-visible + span {
     flex-wrap: wrap;
     padding-top: 16px;
     width: 300px;
-
 }
 
 .details {
@@ -1027,16 +1035,20 @@ input[name="button-radio"]:focus-visible + span {
     border-style: none;
     margin-bottom: 16px;
 }
+
 .details:hover{
    background: #615048;
    cursor: pointer;
 }
+
 .details:active{
     color: rgba(255, 255, 255, 0.3);
 }
+
 .details:focus-visible{
     background: #615048;
 }
+
 .details:disabled{
     background: #E5E5E5;
 }
@@ -1061,12 +1073,15 @@ input[name="button-radio"]:focus-visible + span {
     background-color: #68A2CA;
     cursor: pointer;
 }
+
 .favorite:active{
     color: rgba(255, 255, 255, 0.3);
 }
+
 .favorite:focus-visible{
     background-color: #68A2CA;
 }
+
 .favorite:disabled{
     background-color: #E5E5E5;
 }
@@ -1091,12 +1106,15 @@ input[name="button-radio"]:focus-visible + span {
     background-color: #6C9E42;
     cursor: pointer;
 }
+
 .favorite-style:active{
     color: rgba(255, 255, 255, 0.3);
 }
+
 .favorite-style:focus-visible{
     background-color: #6C9E42;
 }
+
 .favorite-style:disabled{
     background-color: #E5E5E5;
 }
@@ -1104,24 +1122,25 @@ input[name="button-radio"]:focus-visible + span {
 .star {
     width: 140px;
     height: 36px;
-    background-image: url("../img/star.svg"), url("../img/star.svg"), url("../img/star.svg"), url("../img/star.svg");
+    background-image: url("../img/Star4.svg");
     background-repeat: no-repeat;
-    background-position: top 50% left 0, top 50% left 24px, top 50% left 48px, top 50% left 72px;
+    background-position: top 50% left 0;
 }
 
 .star-three{
     width: 140px;
     height: 36px;
-    background-image: url("../img/star.svg"), url("../img/star.svg"), url("../img/star.svg");
+    background-image: url("../img/Star3.svg");
     background-repeat: no-repeat;
-    background-position: top 50% left 0, top 50% left 24px, top 50% left 48px;
+    background-position: top 50% left 0;
 }
+
 .star-two {
     width: 70px;
     height: 36px;
-    background-image: url("../img/star.svg"), url("../img/star.svg");
+    background-image: url("../img/Star2.svg");
     background-repeat: no-repeat;
-    background-position: top 50% left 0, top 50% left 24px;
+    background-position: top 50% left 0;
 }
 
 .raiting {
@@ -1146,6 +1165,7 @@ input[name="button-radio"]:focus-visible + span {
     margin: 35px 0 60px 70px;
     padding: 0;
 }
+
 .number-item-active {
     width: 60px;
     height: 60px;
@@ -1160,6 +1180,7 @@ input[name="button-radio"]:focus-visible + span {
     border-radius: 4px;
     margin-right: 8px;
 }
+
 .number-item {
     width: 60px;
     height: 60px;
@@ -1179,13 +1200,14 @@ input[name="button-radio"]:focus-visible + span {
     background-color: #68A2CA;
     cursor: pointer;
 }
+
 .number-item:active{
     color: rgba(255, 255, 255, 0.3);
 }
+
 .number-item:focus-visible{
     background-color: #68A2CA;
 }
-
 
 .number-item-pass {
     width: 60px;
@@ -1222,12 +1244,12 @@ input[name="button-radio"]:focus-visible + span {
     font-weight: 400;
 }
 
-
 .footer-main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 40px 70px 30px 70px;
+    margin: 40px 70px 30px 70px;
+    height: 50px;
     align-items: center;
 }
 
@@ -1235,22 +1257,29 @@ input[name="button-radio"]:focus-visible + span {
     display: flex;
     align-items: center;
     width: 142px;
-    height: 40px;
+    height: 20px;
     justify-content: space-around;
 }
-.social a:hover path{
+
+.social-reference:hover path{
     fill: #68A2CA;
 }
-.social a:active{
+
+.social-reference:active{
     opacity: 30%;
 }
-.social a:focus-visible path{
+
+.social-reference:focus-visible path{
     border-style: none;
     fill: #68A2CA;
 }
 
 .footer-main a {
     text-decoration: none;
+}
+
+.tel{
+    color: #000000;
     font-family: "PT Sans", sans-serif;
     font-size: 40px;
     font-style: normal;
@@ -1258,23 +1287,27 @@ input[name="button-radio"]:focus-visible + span {
     line-height: 40px;
     text-transform: uppercase;
 }
-.tel{
-    padding-top: 8px;
-    color: #000000;
-}
 
 .tel:hover{
     color: #756157;
 }
+
 .tel:focus{
     color: #756157;
 }
+
 .tel:active{
     opacity: 30%;
 }
+
+.logo-html{
+    padding-top: 5px;
+}
+
 .logo-html:hover path, .logo-html:focus-visible path{
     fill: #756157;
 }
+
 .logo-html:active{
     opacity: 30%;
 }
@@ -1304,7 +1337,6 @@ input[name="button-radio"]:focus-visible + span {
     width: 717px;
 }
 
-
 .modal-close-button {
     position: absolute;
     padding: 0;
@@ -1320,12 +1352,15 @@ input[name="button-radio"]:focus-visible + span {
     border-radius: 50%;
     background-color: #F2F2F2;
 }
+
 .modal-close-button:focus-visible{
     border: 2px solid #83B3D3;
 }
+
 .modal-close-button:hover{
     background-color: #E6E6E6;
 }
+
 .modal-content {
     display: flex;
     flex-wrap: wrap;
@@ -1341,6 +1376,7 @@ input[name="button-radio"]:focus-visible + span {
     color: #000000;
     text-transform: uppercase;
 }
+
 .field-group {
     display: flex;
     justify-content: space-between;
@@ -1348,6 +1384,7 @@ input[name="button-radio"]:focus-visible + span {
     width: 597px;
     margin-top: 23px;
 }
+
 .visually-hidden-text{
     max-width: 137px;
     margin: 0;
@@ -1356,6 +1393,7 @@ input[name="button-radio"]:focus-visible + span {
     font-weight: 700;
     text-transform: capitalize;
 }
+
 .auth-form-field {
     width: 440px;
     height: 48px;
@@ -1373,8 +1411,6 @@ input[name="button-radio"]:focus-visible + span {
     font-weight: 700;
 }
 
-
-
 .modal-line-red{
     margin: 0 3px 0 10em;
     padding: 0;
@@ -1382,6 +1418,7 @@ input[name="button-radio"]:focus-visible + span {
     line-height: 21px;
     color: #FF5757;
 }
+
 .modal-line-black {
     margin: 0 3px 0 10em;
     padding: 0;
@@ -1401,6 +1438,7 @@ input[name="button-radio"]:focus-visible + span {
     align-items: center;
     margin-top: 23px;
 }
+
 .number-childs svg{
     margin-left: 10px;
 }
@@ -1414,6 +1452,7 @@ input[name="button-radio"]:focus-visible + span {
    background-color: #F2F2F2;
    border-radius: 5px;
 }
+
 .button-minus{
     border-style: none;
     width: 20px;
@@ -1426,6 +1465,7 @@ input[name="button-radio"]:focus-visible + span {
     margin: 14px 10px;
     border: 2px solid transparent;
 }
+
 .button-minus:focus-visible{
     border: 2px solid #83B3D3;
     border-radius: 4px;
@@ -1443,11 +1483,11 @@ input[name="button-radio"]:focus-visible + span {
     margin: 14px 10px;
     border: 2px solid transparent;
 }
+
 .button-plus:focus-visible{
     border: 2px solid #83B3D3;
     border-radius: 4px;
 }
-
 
 .input-plus-minus {
     padding: 0;
@@ -1460,7 +1500,6 @@ input[name="button-radio"]:focus-visible + span {
     line-height: 20px;
     text-align: center;
 }
-
 
 .find {
     margin-top: 48px;
@@ -1481,9 +1520,11 @@ input[name="button-radio"]:focus-visible + span {
 .find:hover, .find:focus-visible{
     background-color: #68A2CA;
 }
+
 .find:active{
     color: rgba(255, 255, 255, 0.3);
 }
+
 .find:disabled{
     background-color: #E5E5E5;
 }
@@ -1505,10 +1546,10 @@ input[name="button-radio"]:focus-visible + span {
     height: 26px;
 }
 
-
 .tooltip-toggle:hover .tooltip-icon {
     color: #AF7842;
 }
+
 .tooltip-text {
     background-color: #242424;
     color: #ffffff;
@@ -1527,10 +1568,12 @@ input[name="button-radio"]:focus-visible + span {
     z-index: 1;
     display: none;
   }
-  .tooltip-toggle:hover + .tooltip-text,
+
+.tooltip-toggle:hover + .tooltip-text,
 .tooltip-toggle:focus + .tooltip-text {
   display: block;
 }
+
 .tooltip-text:after {
     content:'';
     background-image: url("../img/tooltip.svg");
@@ -1542,4 +1585,4 @@ input[name="button-radio"]:focus-visible + span {
     right:0;
     margin-left: auto;
     margin-right: auto;
-  }
+}

@@ -48,7 +48,7 @@
   </header>
 
   <main data-test="main">
-    <section class="hero" data-test="hero">
+    <section class="page" data-test="page">
       <h1>Гостиницы Седоны</h1>
       <ol class="home">
         <li class="home-list">
@@ -107,14 +107,14 @@
         <div class="cost-filter">
           <p>Стоимость, ₽:</p>
           <div class="cost">
-            <div class="test">
+            <div class="cost-areal">
               <label for="from"></label>
-              <input type="text" id="from" class="before" value="0">
+              <input type="text" id="from" class="before" value="0" placeholder="цена от">
               <span>от</span>
             </div>
-            <div class="test">
+            <div class="cost-areal">
               <label for="to"></label>
-              <input type="text" id="to" class="after" value="9000">
+              <input type="text" id="to" class="after" value="9000" placeholder="цена до">
               <span>до</span>
             </div>
           </div>
@@ -128,7 +128,6 @@
 
 
         <div class="button-test">
-          <span></span>
           <button class="filter-button" type="button">ПРИМЕНИТЬ</button>
           <button class="clear-button" type="button">СБРОСИТЬ</button>
         </div>
