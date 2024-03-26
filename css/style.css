@@ -13,12 +13,31 @@
     src: url("../fonts/ptsans-700.woff2") format("woff2");
     font-display: swap;
 }
-*{
-    box-sizing: border-box;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    object-fit: contain;
 }
 
 button:hover{
     cursor: pointer;
+}
+
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 body {
@@ -33,45 +52,44 @@ body {
                  40px 0 37px 0 rgba(227, 227, 227, 1);
 }
 
-.header-main {
-    width: 1200px;
-    height: 64px;
-    margin: 0 auto;
-    display: block;
-}
-
-.main-nav {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 70px;
-}
 
 .navigation{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 70px;
     min-height: 64px;
 }
 
 .logo {
     margin-right: 30px;
+    margin-bottom: -6px;
+    width: 140px;
+}
+
+.logo-sedona{
+    position: relative;
     z-index: 1;
+    display: block;
+}
+
+.list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .site-navigation {
     display: flex;
-    justify-content: space-between;
     list-style: none;
-    align-items: center;
     flex-wrap: wrap;
-    margin: 0 305px 0 0;
-    padding: 0;
-    height: 64px;
+    max-width: 506px;
 }
 
-.site-navigation-item a{
-    margin: 0 15px;
-    padding-top: 20px;
+.navigation-list{
+    position: relative;
     display: block;
+    padding: 20px 16px;
+    text-align: center;
     text-decoration: none;
     color: #000000;
     font-size: 20px;
@@ -82,42 +100,62 @@ body {
     height: 64px;
 }
 
-.site-navigation-item a:hover {
-    border-bottom: 1px solid #756257;
-    padding-bottom: 20px;
+.list-current::after{
+    position: absolute;
+    right: 16px;
+    left: 16px;
+    bottom: -1px;
+    height: 2px;
+    content: "";
+    background-color: #756257;
 }
 
-.site-navigation-item a:focus-visible {
+.navigation-list:hover {
+    opacity: 30%;
+}
+
+.navigation-list:focus-visible {
     border-bottom: 1px solid #756257;
     padding-bottom: 20px;
 }
 
 .icons {
-    height: 64px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 24px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    flex-wrap: wrap;
+    align-items: start;
+    margin-left: auto;
+    max-width: 268px;
 }
 
-.icons-heart{
+.icons-list{
+    display: block;
+    padding: 18px 12px;
+    min-height: 20px;
+    min-width: 20px;
+}
+
+.navigation-icon{
+    fill: #000000;
+}
+
+.icon-favorite{
     position: relative;
 }
 
-.icons-heart p{
+.icon-favorite::after{
     position: absolute;
-    top: -7px;
-    left: 7px;
-    margin: 0;
-    background-color: #7DB54F;
-    border-radius: 50%;
-    padding: 5px;
+    top: 10px;
+    left: 20px;
+    content: "12";
+    min-width: 20px;
+    height: 20px;
+    padding: 5px 5px 5px 4px;
+    box-sizing: border-box;
     font-size: 10px;
     line-height: 10px;
     color: #FFFFFF;
+    background-color: #7DB54F;
+    border-radius: 50%;
 }
 
 .nav-button {
@@ -131,10 +169,11 @@ body {
     line-height: 20px;
     text-transform: uppercase;
     text-align: center;
-    margin-left: 8px;
+    margin: 14px 0 14px 20px;
     border-style: none;
     width: 160px;
     height: 36px;
+    outline: none;
 }
 
 .nav-button:hover{
@@ -154,15 +193,15 @@ body {
     background-color: #E5E5E5;
 }
 
-main{
+.main{
     flex-grow: 1;
 }
 
 .hero{
     display: block;
     width: 1200px;
-    height: 485px;
-    background-image: url("../img/background.svg"), url("../img/index-background.png");
+    min-height: 485px;
+    background-image: url("../img/background.svg"), url("../img/index-background.jpg");
     background-repeat: no-repeat;
     background-size: 100%, cover;
     background-position: top 100% left, bottom 100% left;
@@ -176,17 +215,6 @@ main{
 img{
     max-width: 100%;
     object-fit: contain;
-}
-
-.visually-hidden-title{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
 }
 
 .item-title {
@@ -219,14 +247,12 @@ img{
     flex-wrap: wrap;
     padding: 0;
     margin: 0 0 65px 0;
-    width: 1200px;
 }
 
 .advantage-item {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    height: 385px;
+    display: flex;
+    justify-content: center;
+    min-height: 385px;
     width: 400px;
     color: #FFFFFF;
 }
@@ -237,16 +263,18 @@ img{
 
 .advantage-item:nth-child(2), .advantage-item:nth-child(6){
     width: 800px;
+    min-height: 385px;
+    background-color: rgb(130, 179, 211);
 }
 
 .advantage-item:nth-child(3),  .advantage-item:nth-child(5){
     background-color: rgba(131, 179, 211, 0.122);
-    padding-top: 25px;
+    padding-top: 10px;
 }
 
 .advantage-item:nth-child(4){
+    padding-top: 10px;
     background-color: rgba(131, 179, 211, 0.2);
-    padding-top: 25px;
 }
 
 .advantage-item:nth-child(7){
@@ -254,23 +282,18 @@ img{
 }
 
 .advantage-item-text {
-    position: relative;
-    transform: translate(0, -50%);
-    top: 50%;
-    margin: 0 auto;
-    min-height: 181px;
-    width: 230px;
-    text-align: center;
+    margin: 102px 80px;
+    min-width: 235px;
 }
 
 .advantage-title{
-    margin: 0;
-    text-transform: uppercase;
+    margin: 0 auto 30px;
     font-size: 24px;
     line-height: 28px;
-    text-align: center;
-    padding-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
     position: relative;
+    text-align: center;
 }
 
 .advantage-title::after {
@@ -295,15 +318,13 @@ img{
 }
 
 .advantage-item p{
+    margin: 0;
     font-size: 18px;
     text-align: center;
-    margin: 30px 0 0 0;
     line-height: 21px;
-    width: 230px;
     min-height: 42px;
     font-weight: 400;
-    white-space: nowrap;
-    align-items: center;
+    padding-top: 30px;
 }
 
 .advantage-item:nth-child(3), .advantage-item:nth-child(4), .advantage-item:nth-child(5){
@@ -315,7 +336,7 @@ img{
     padding: 0;
 }
 
-.peculiarity h2 {
+.peculiarity-title {
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
@@ -326,7 +347,7 @@ img{
     margin: 0 0 20px 0;
 }
 
-.peculiarity p{
+.peculiarity-text{
     margin: 0;
     padding: 0;
     text-align: center;
@@ -339,16 +360,19 @@ img{
 .peculiarity-items {
     display: flex;
     flex-wrap: wrap;
-    padding: 0;
-    margin: 65px 0 0 0;
+    margin-top: 64px;
 }
 
 .peculiarity-list {
-    margin: 0;
-    text-align: center;
-    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 400px;
-    height: 385px;
+    min-height: 385px;
+    background-repeat: no-repeat;
+    background-size: 75px 72px;
+    background-position: 50% 81px;
+    text-align: center;
 }
 
 .peculiarity-list:nth-child(1) {
@@ -375,18 +399,22 @@ img{
 }
 
 .peculiarity-list h3{
-    margin: 0;
-    padding: 183px 0 30px 0;
+    display: block;
+    width: 230px;
+    margin: 183px auto 30px;
     font-size: 24px;
     line-height: 28px;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .peculiarity-list p{
+    width: 230px;
+    margin: 0;
+    padding-bottom: 81px;
     font-size: 18px;
     line-height: 21px;
     font-weight: 400;
-    padding-bottom: 80px;
 }
 
 .search {
@@ -421,7 +449,7 @@ img{
     border-radius: 4px;
     background: #756157;
     width: 376px;
-    height: 52px;
+    min-height: 52px;
     font-family: "PT Sans", sans-serif;
     font-size: 20px;
     font-style: normal;
@@ -431,6 +459,7 @@ img{
     margin-bottom: 96px;
     color: aliceblue;
     border-style: none;
+    outline: none;
 }
 
 .button-search:hover{
@@ -452,10 +481,10 @@ img{
 
 .mail {
     background-color: #68A2CA;
-    background-image: url("../img/email-fon.svg");
+    background-image: url("../img/email-background.svg");
     text-align: center;
     color: #FFFFFF;
-    height: 415px;
+    min-height: 415px;
 }
 
 .mail h2{
@@ -474,12 +503,10 @@ img{
 }
 
 .input {
-    margin: 0 auto;
-    padding-top: 32px;
+    margin: 54px auto 104px;
     width: 684px;
     display: flex;
     justify-content: center;
-    align-content: center;
 }
 
 .mail-input {
@@ -493,6 +520,7 @@ img{
     line-height: 24px;
     background-color: #F2F2F2;
     border: 3px solid transparent;
+    outline: none;
 }
 
 .mail-input:focus-visible {
@@ -513,12 +541,14 @@ img{
     border-radius: 0 4px 4px 0;
     border-style: none;
     padding: 8px 50px;
+    outline: none;
 }
 
 .button-mail:hover{
     background-color: #68A2CA;
     cursor: pointer;
 }
+
 .button-mail:active{
     color: rgba(255, 255, 255, 0.3);
 }
@@ -531,16 +561,13 @@ img{
     background-color: #68A2CA;
 }
 
-
-
-
 .page{
-    background-image: url("../img/fon-filter.png");
+    background-image: url("../img/bacground-filter.png");
     background-color: #68A2CA;
     background-repeat: no-repeat;
     background-size: cover;
     width: 1200px;
-    height: 408px;
+    min-height: 408px;
     padding: 35px 70px 70px 70px;
 }
 
@@ -564,12 +591,12 @@ img{
     align-items: center;
     justify-content: space-between;
     list-style: none;
-    padding: 0;
+    padding: 15px 0 0 0;
 }
 
-.home a{
+.home-list-item-before{
     position: relative;
-    margin-top: 10px;
+    outline: none;
 }
 
 .home-list-item-before::before{
@@ -581,7 +608,7 @@ img{
     content: "";
     position: absolute;
     left: 23px;
-    top: 12px;
+    top: 10px;
 }
 
 .home-list-item{
@@ -592,6 +619,8 @@ img{
     font-size: 16px;
     line-height: 21px;
     font-weight: 400;
+    display: block;
+    text-align: center;
 }
 
 .filter {
@@ -600,21 +629,21 @@ img{
     width: 1060px;
     margin: 0 auto;
     height: 160px;
-    padding: 40px 0 0 0;
+    padding: 35px 0 0 0;
 }
 
 .filter p {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-    margin: 0 0 32px 0;
+    margin: 0 0 35px 0;
 }
 
 .container {
     display: block;
     position: relative;
-    padding-left: 35px;
-    margin-bottom: 17px;
+    padding-left: 36px;
+    margin-bottom: 16px;
     cursor: pointer;
     font-size: 18px;
     line-height: 23px;
@@ -645,10 +674,13 @@ input[type="checkbox"]:focus-visible + span {
     background-color: #ffffff;
 }
 
-.checkmark:after {
+.checkmark::after {
     content: "";
     position: relative;
     display: none;
+    background-image: url("../img/check.svg");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .container input:checked ~ .checkmark:after {
@@ -656,19 +688,15 @@ input[type="checkbox"]:focus-visible + span {
 }
 
 .container .checkmark:after {
-    left: 6px;
-    top: 2px;
-    width: 5px;
+    left: 4px;
+    top: 5px;
+    width: 12px;
     height: 10px;
-    border: solid black;
     border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
 }
 
 .radio-button {
-    margin: 0 142px 0 70px;
+    margin: 0 140px 0 72px;
 }
 
 .form-radio-hidden{
@@ -745,7 +773,6 @@ input[name="button-radio"]:focus-visible + span {
     line-height: 23px;
 }
 
-
 .cost-filter{
     margin: 0 70px 0 0;
     padding: 0;
@@ -756,7 +783,7 @@ input[name="button-radio"]:focus-visible + span {
 .cost {
     width: 289px;
     display: flex;
-    margin-bottom: 34px;
+    margin-bottom: 32px;
 }
 
 .cost-areal {
@@ -790,6 +817,7 @@ input[name="button-radio"]:focus-visible + span {
     line-height: 24px;
     font-weight: 700;
     width: 143px;
+    outline: none;
 }
 
 .before:hover{
@@ -809,6 +837,7 @@ input[name="button-radio"]:focus-visible + span {
     line-height: 24px;
     font-weight: 700;
     width: 143px;
+    outline: none;
 }
 
 .after:hover{
@@ -819,7 +848,7 @@ input[name="button-radio"]:focus-visible + span {
     border: 3px solid #82B3D3;
 }
 
-.button-test{
+.button-filter-clear{
     display: flex;
     flex-wrap: wrap;
     align-items: end;
@@ -827,7 +856,7 @@ input[name="button-radio"]:focus-visible + span {
 }
 
 .filter-button {
-    margin-top: 56px;
+    margin-top: 58px;
     background-color: #82B3D3;
     padding: 8px 50px;
     border-radius: 4px;
@@ -861,17 +890,18 @@ input[name="button-radio"]:focus-visible + span {
     margin-top: 30px;
     background-color: transparent;
     border-style: none;
-    padding: 8px 55px;
+    padding: 8px 50px;
     color: #FFFFFF;
     font-family: "PT Sans", sans-serif;
     font-size: 16px;
     line-height: 20px;
     font-weight: 700;
     text-align: center;
-    width: 80px;
+    width: 85px;
     border: 2px solid transparent;
     box-sizing: content-box;
     border-radius: 4px;
+    outline: none;
 }
 
 .clear-button:hover{
@@ -881,7 +911,7 @@ input[name="button-radio"]:focus-visible + span {
 
 .clear-button:focus-visible{
     opacity: 100%;
-    border: 3px solid #83B3D3;
+    border: 2px solid #83B3D3;
     box-sizing: content-box;
 }
 
@@ -894,7 +924,7 @@ input[name="button-radio"]:focus-visible + span {
 }
 
 .hotel {
-    margin: 55px auto 25px;
+    margin: 53px auto 25px;
     width: 1060px;
     border-bottom: 1px solid #E6E6E6;
 }
@@ -962,6 +992,15 @@ input[name="button-radio"]:focus-visible + span {
     border: 2px solid #E5E5E5;
     border-radius: 4px;
     padding: 14px 12px;
+    position: relative;
+    outline: none;
+}
+
+.arial-icon{
+    position: absolute;
+    margin: auto;
+    top: 15px;
+    left: 14px;
 }
 
 .areal:hover{
@@ -980,17 +1019,20 @@ input[name="button-radio"]:focus-visible + span {
 .hotel-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 17px;
+    gap: 19px;
     padding: 17px 0 20px 0;
 }
 
 .hotel-items {
+    width: 340px;
+    min-height: 438px;
     list-style: none;
     padding: 20px;
     border: 1px solid #E6E6E6;
     border-radius: 4px;
     margin-bottom: 2px;
 }
+
 .hotel-items a{
     text-decoration: none;
     color: #000000;
@@ -1252,19 +1294,34 @@ input[name="button-radio"]:focus-visible + span {
 
 .footer-main {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    margin: 40px 70px 30px 70px;
-    height: 50px;
     align-items: center;
+    min-height: 50px;
+    padding: 40px 70px 30px 70px;
+}
+
+.footer-main a {
+    text-decoration: none;
 }
 
 .social{
     display: flex;
-    align-items: center;
-    width: 142px;
-    height: 20px;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 145px;
+}
+
+.social-item{
+    position: relative;
+    width: 48px;
+    height: 41px;
+}
+
+.social-reference{
+    position: absolute;
+    display: block;
+    width: 48px;
+    height: 41px;
+    padding: 8px 12px;
 }
 
 .social-reference:hover path{
@@ -1280,18 +1337,17 @@ input[name="button-radio"]:focus-visible + span {
     fill: #68A2CA;
 }
 
-.footer-main a {
-    text-decoration: none;
-}
-
 .tel{
-    color: #000000;
-    font-family: "PT Sans", sans-serif;
+    display: inline-block;
+    width: 720px;
     font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 40px;
-    text-transform: uppercase;
+    font-style: normal;
+    text-decoration: none;
+    word-break: break-all;
+    color: #000000;
+    text-align: center;
+    margin-top: 5px;
 }
 
 .tel:hover{
@@ -1307,7 +1363,7 @@ input[name="button-radio"]:focus-visible + span {
 }
 
 .logo-html{
-    padding-top: 5px;
+    padding-top: 7px;
 }
 
 .logo-html:hover path, .logo-html:focus-visible path{
@@ -1317,8 +1373,6 @@ input[name="button-radio"]:focus-visible + span {
 .logo-html:active{
     opacity: 30%;
 }
-
-/*форма*/
 
 .modal-container {
     position: fixed;
@@ -1357,6 +1411,7 @@ input[name="button-radio"]:focus-visible + span {
     cursor: pointer;
     border-radius: 50%;
     background-color: #F2F2F2;
+    outline: none;
 }
 
 .modal-close-button:focus-visible{
@@ -1415,6 +1470,12 @@ input[name="button-radio"]:focus-visible + span {
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
+    outline: none;
+}
+
+.auth-form-field:focus-visible{
+    border: 2px solid #83B3D3;
+    border-radius: 4px;
 }
 
 .modal-line-red{
@@ -1445,10 +1506,6 @@ input[name="button-radio"]:focus-visible + span {
     margin-top: 23px;
 }
 
-.number-childs svg{
-    margin-left: 10px;
-}
-
 .button-number{
    display: flex;
    width: 110px;
@@ -1457,19 +1514,38 @@ input[name="button-radio"]:focus-visible + span {
    border-style: none;
    background-color: #F2F2F2;
    border-radius: 5px;
+   cursor: pointer;
 }
 
 .button-minus{
-    border-style: none;
-    width: 20px;
+    position: relative;
+    display: block;
     height: 20px;
-    color: #7561574D;
-    background-image: url("../img/minus.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 0;
+    width: 20px;
     margin: 14px 10px;
-    border: 2px solid transparent;
+    font-family: inherit;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+    outline: none;
+}
+
+.button-minus-svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 14px;
+    height: 20px;
+    border-radius: 4px;
+    fill: #D9D9D9;
+}
+
+.button-minus:hover path{
+    fill: #000000;
+    cursor: pointer;
 }
 
 .button-minus:focus-visible{
@@ -1478,16 +1554,33 @@ input[name="button-radio"]:focus-visible + span {
 }
 
 .button-plus{
-    border-style: none;
-    width: 20px;
+    position: relative;
+    display: block;
     height: 20px;
-    color: #7561574D;
-    background-image: url("../img/plus.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 0;
+    width: 20px;
     margin: 14px 10px;
-    border: 2px solid transparent;
+    font-family: inherit;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+    outline: none;
+}
+
+.button-plus-svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 14px;
+    height: 20px;
+    border-radius: 4px;
+    fill: #D9D9D9;
+}
+
+.button-plus:hover path{
+    fill: #000000;
 }
 
 .button-plus:focus-visible{
@@ -1511,7 +1604,7 @@ input[name="button-radio"]:focus-visible + span {
     margin-top: 48px;
     background-color: #83B3D3;
     width: 577px;
-    height: 60px;
+    min-height: 60px;
     padding: 18px 77px;
     border-radius: 10px;
     font-family: "PT Sans", sans-serif;
@@ -1521,6 +1614,7 @@ input[name="button-radio"]:focus-visible + span {
     color: #FFFFFF;
     text-transform: uppercase;
     border-style: none;
+    outline: none;
 }
 
 .find:hover, .find:focus-visible{
@@ -1556,6 +1650,10 @@ input[name="button-radio"]:focus-visible + span {
     color: #AF7842;
 }
 
+.tooltip-svg{
+    margin-left: 10px;
+}
+
 .tooltip-text {
     background-color: #242424;
     color: #ffffff;
@@ -1573,7 +1671,7 @@ input[name="button-radio"]:focus-visible + span {
     transform: translateX(-50%);
     z-index: 1;
     display: none;
-  }
+}
 
 .tooltip-toggle:hover + .tooltip-text,
 .tooltip-toggle:focus + .tooltip-text {
