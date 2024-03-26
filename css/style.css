@@ -591,6 +591,7 @@ img{
 
 .home-list-item-before{
     position: relative;
+    outline: none;
 }
 
 .home-list-item-before::before{
@@ -811,6 +812,7 @@ input[name="button-radio"]:focus-visible + span {
     line-height: 24px;
     font-weight: 700;
     width: 143px;
+    outline: none;
 }
 
 .before:hover{
@@ -830,6 +832,7 @@ input[name="button-radio"]:focus-visible + span {
     line-height: 24px;
     font-weight: 700;
     width: 143px;
+    outline: none;
 }
 
 .after:hover{
@@ -893,6 +896,7 @@ input[name="button-radio"]:focus-visible + span {
     border: 2px solid transparent;
     box-sizing: content-box;
     border-radius: 4px;
+    outline: none;
 }
 
 .clear-button:hover{
@@ -902,7 +906,7 @@ input[name="button-radio"]:focus-visible + span {
 
 .clear-button:focus-visible{
     opacity: 100%;
-    border: 3px solid #83B3D3;
+    border: 2px solid #83B3D3;
     box-sizing: content-box;
 }
 
@@ -984,6 +988,7 @@ input[name="button-radio"]:focus-visible + span {
     border-radius: 4px;
     padding: 14px 12px;
     position: relative;
+    outline: none;
 }
 
 .arial-icon{
@@ -1401,6 +1406,7 @@ input[name="button-radio"]:focus-visible + span {
     cursor: pointer;
     border-radius: 50%;
     background-color: #F2F2F2;
+    outline: none;
 }
 
 .modal-close-button:focus-visible{
@@ -1459,6 +1465,12 @@ input[name="button-radio"]:focus-visible + span {
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
+    outline: none;
+}
+
+.auth-form-field:focus-visible{
+    border: 2px solid #83B3D3;
+    border-radius: 4px;
 }
 
 .modal-line-red{
@@ -1497,47 +1509,74 @@ input[name="button-radio"]:focus-visible + span {
    border-style: none;
    background-color: #F2F2F2;
    border-radius: 5px;
+   cursor: pointer;
 }
 
 .button-minus{
-    border-style: none;
-    width: 40px;
     position: relative;
+    display: block;
+    height: 20px;
+    width: 20px;
+    margin: 14px 10px;
+    font-family: inherit;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+    outline: none;
 }
 
 .button-minus-svg{
     position: absolute;
-    right: 12px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 14px;
+    height: 20px;
+    border-radius: 4px;
     fill: #D9D9D9;
 }
 
 .button-minus:hover path{
     fill: #000000;
+    cursor: pointer;
 }
 
-
-.button-minus-svg:focus-visible{
+.button-minus:focus-visible{
     border: 2px solid #83B3D3;
     border-radius: 4px;
 }
 
 .button-plus{
-    border-style: none;
-    width: 40px;
     position: relative;
+    display: block;
+    height: 20px;
+    width: 20px;
+    margin: 14px 10px;
+    font-family: inherit;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+    outline: none;
 }
 
 .button-plus-svg{
     position: absolute;
-    top: 17px;
-    left: 10px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 14px;
+    height: 20px;
+    border-radius: 4px;
     fill: #D9D9D9;
 }
 
 .button-plus:hover path{
     fill: #000000;
 }
-
 
 .button-plus:focus-visible{
     border: 2px solid #83B3D3;
@@ -1570,6 +1609,7 @@ input[name="button-radio"]:focus-visible + span {
     color: #FFFFFF;
     text-transform: uppercase;
     border-style: none;
+    outline: none;
 }
 
 .find:hover, .find:focus-visible{
