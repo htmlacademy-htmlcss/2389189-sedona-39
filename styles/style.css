@@ -1182,7 +1182,7 @@ input[name="button-radio"]:focus-visible + span {
 .star {
     width: 140px;
     height: 36px;
-    background-image: url("../images/Star-4.svg");
+    background-image: url("../images/star-4.svg");
     background-repeat: no-repeat;
     background-position: top 50% left 0;
 }
@@ -1190,7 +1190,7 @@ input[name="button-radio"]:focus-visible + span {
 .star-three{
     width: 140px;
     height: 36px;
-    background-image: url("../images/Star-3.svg");
+    background-image: url("../images/star-3.svg");
     background-repeat: no-repeat;
     background-position: top 50% left 0;
 }
@@ -1198,7 +1198,7 @@ input[name="button-radio"]:focus-visible + span {
 .star-two {
     width: 70px;
     height: 36px;
-    background-image: url("../images/Star-2.svg");
+    background-image: url("../images/star-2.svg");
     background-repeat: no-repeat;
     background-position: top 50% left 0;
 }
