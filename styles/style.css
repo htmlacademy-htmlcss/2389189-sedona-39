@@ -574,7 +574,7 @@ img{
     background-size: cover;
     width: 1200px;
     min-height: 408px;
-    padding: 35px 70px 70px 70px;
+    padding: 35px 70px 50px 70px;
 }
 
 .page h1{
@@ -872,6 +872,7 @@ input[name="button-radio"]:focus-visible + span {
     font-weight: 700;
     text-align: center;
     border-style: none;
+    outline: none;
 }
 
 .filter-button:hover{
@@ -892,7 +893,7 @@ input[name="button-radio"]:focus-visible + span {
 }
 
 .clear-button {
-    margin-top: 30px;
+    margin-top: 15px;
     background-color: transparent;
     border-style: none;
     padding: 8px 50px;
@@ -929,7 +930,7 @@ input[name="button-radio"]:focus-visible + span {
 }
 
 .hotel {
-    margin: 53px auto 25px;
+    margin: 52px auto 25px;
     width: 1060px;
     border-bottom: 1px solid #E6E6E6;
 }
@@ -946,9 +947,9 @@ input[name="button-radio"]:focus-visible + span {
     line-height: 36px;
     font-weight: 700;
     text-transform: uppercase;
-    height: 49px;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 .hotel-form {
@@ -1025,10 +1026,11 @@ input[name="button-radio"]:focus-visible + span {
 }
 
 .hotel-list {
+    width: 1060px;
     display: flex;
     flex-wrap: wrap;
-    gap: 19px;
-    padding: 17px 0 20px 0;
+    gap: 20px;
+    padding: 17px 0 18px 0;
 }
 
 .hotel-items {
@@ -1038,7 +1040,6 @@ input[name="button-radio"]:focus-visible + span {
     padding: 20px;
     border: 1px solid #E6E6E6;
     border-radius: 4px;
-    margin-bottom: 2px;
 }
 
 .hotel-items a{
@@ -1051,12 +1052,13 @@ input[name="button-radio"]:focus-visible + span {
     font-size: 24px;
     line-height: 28px;
     font-weight: 700;
-    padding: 10px 0 15px 0;
+    padding: 10px 0 16px 0;
 }
 
 .price {
     display: flex;
     justify-content: space-between;
+    width: 300px;
 }
 
 .price p{
@@ -1220,7 +1222,7 @@ input[name="button-radio"]:focus-visible + span {
 .number-list {
     display: flex;
     list-style: none;
-    margin: 35px 0 60px 70px;
+    margin: 38px 0 60px 70px;
     padding: 0;
 }
 
@@ -1237,6 +1239,7 @@ input[name="button-radio"]:focus-visible + span {
     border-style: none;
     border-radius: 4px;
     margin-right: 8px;
+    outline: none;
 }
 
 .number-item {
@@ -1252,6 +1255,7 @@ input[name="button-radio"]:focus-visible + span {
     border-style: none;
     border-radius: 4px;
     margin-right: 8px;
+    outline: none;
 }
 
 .number-item:hover{
@@ -1301,7 +1305,7 @@ input[name="button-radio"]:focus-visible + span {
     font-size: 22px;
     line-height: 26px;
     font-weight: 400;
-    padding: 0;
+    padding: 20px 0 0 0;
     margin: 0;
 }
 
@@ -1561,9 +1565,10 @@ input[name="button-radio"]:focus-visible + span {
     cursor: pointer;
 }
 
-.button-minus:focus-visible{
+.button-minus:focus-visible, .button-minus:focus-visible path{
     border: 2px solid #83B3D3;
     border-radius: 4px;
+    fill: #000000;
 }
 
 .button-plus{
@@ -1596,9 +1601,10 @@ input[name="button-radio"]:focus-visible + span {
     fill: #000000;
 }
 
-.button-plus:focus-visible{
+.button-plus:focus-visible, .button-plus:focus-visible path{
     border: 2px solid #83B3D3;
     border-radius: 4px;
+    fill: #000000;
 }
 
 .input-plus-minus {
